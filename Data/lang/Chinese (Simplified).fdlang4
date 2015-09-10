@@ -1,0 +1,2611 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<!-- 
+	***************************************************************
+	This XML language file is split into three sections:
+	***************************************************************
+	
+		I. Forms
+		II. Dialogs
+		III. Constants
+
+	***************************************************************
+	If you translate this file into another language, note that you
+	may need to save it as UTF-8 for accented characters to appear
+	correctly in FeedDemon
+	***************************************************************
+	THIS FILE WILL BE OVERWRITTEN EVERY TIME THE APP IS INSTALLED,
+	SO BE SURE TO BACKUP ANY CHANGES !
+	***************************************************************
+-->
+<!--  translators: make sure to include the version attribute.
+	  note that the FDLANG version isn't necessary exactly the
+	  same as the application version (but it usually is) -->
+<language name="简体中文" version="4.0.0.24">
+<!-- 
+************************
+*** SECTION I: FORMS ***
+************************
+-->
+	<forms>
+		<!-- form: main form -->
+		<form name="fFDMain">
+			<!-- file actions -->
+			<control name="actFileNewFeed" caption="新建 (&amp;S)"/>
+			<control name="actFileNewFolder" caption="新建文件夹 (&amp;F)"/>
+			<control name="actFileNewNewsBin" caption="新建剪报箱 (&amp;C)"/>
+			<control name="actFileNewWatch" caption="新建监视器 (&amp;W)"/>
+			<control name="actFileImportFeeds" caption="导入 Feed (&amp;I)..."/>
+			<control name="actFileExportFeeds" caption="导出 Feed (&amp;E)..."/>
+			<control name="actFileExportTopFeeds" caption="导出热门 Feed (&amp;T)..."/>
+			<control name="actFileExit" caption="退出 $APP_NAME$ (&amp;X)"/>
+			<control name="actFileOffline" caption="脱机工作 (&amp;O)"/>
+			<control name="actFilePrefetchUnread" caption="为脱机工作预读条目..."/>
+			<control name="actFileOpenCacheFolder" caption="打开缓存文件夹"/>
+			<control name="actFileManageCache" caption="管理缓存 (&amp;H)"/>
+			<control name="actFileMinimizeToTray" caption="最小化到系统托盘 (&amp;M)"/>
+			<control name="actFileFindFeeds" caption="查找新 Feed(&amp;N)..."/>
+			<control name="actFileExportEventLog" caption="导出事件记录..."/>
+			<!-- debug - not exposed -->
+			<control name="mnuDebug" caption="调试"/>
+			<control name="actDebugSyncPosts" caption="同步帖子状态"/>
+			<control name="actDebugScanForGRSubs" caption="检查 $S_GoogleReader$ 订阅修改"/>
+			<control name="actDebugEnableNewspaperDebug" caption="报纸调试（影响性能！）"/>
+			<control name="actDebugReloadLang" caption="重新载入语言文件"/>
+			<control name="actDebugResize800" caption="调整大小为 800x600"/>
+			<control name="actDebugResize1024" caption="调整大小为 1024x768"/>
+			<control name="actDebugResize1280" caption="调整大小为 1280x1024"/>
+			<control name="actDebugEnableAllDisabledFeeds" caption="重新启用所有被禁用的 Feed"/>
+			<!-- options -->
+			<control name="actOptionsShowOptions" caption="选项 (&amp;O)..."/>
+			<control name="actOptionsKeyboardShortcuts" caption="快捷键 (&amp;K)..."/>
+			<control name="actOptionsConfigureBlogThisApps" caption="配置 Blog 发布工具..."/>
+			<control name="actOptionsResetToolbars" caption="重置工具栏 (&amp;R)..."/>
+			<control name="actOptionsDesktopAlert" caption="选项..."/>
+			<control name="actOptionsInternet" caption="Internet 选项 (&amp;I)..."/>
+			<control name="actOptionsSync" caption="同步选项 (&amp;Z)..."/>
+			<control name="actOptionsConnection" caption="连接设置..."/>
+			<control name="actOptionsToggleLowBandwidthForJack" caption="低带宽切换"/>
+			<!-- focus -->
+			<control name="actFocusAddressBar" caption="焦点切换到到地址栏"/>
+			<control name="actFocusBrowser" caption="焦点切换到浏览器"/>
+			<control name="actFocusNewsItems" caption="焦点切换到新闻项"/>
+			<control name="actFocusSubscriptions" caption="焦点切换到订阅"/>
+			<!-- view actions -->
+			<control name="actViewNextFeed" caption="下一个 Feed (&amp;F)"/>
+			<control name="actViewNextUnreadFeed" caption="下一个未读的 Feed (&amp;E)"/>			
+			<control name="actViewNextNewsItem" caption="下一个条目 (&amp;N)"/>
+			<control name="actViewNextUnreadNewsItem" caption="下一个未读的条目 (&amp;U)"/>
+			<control name="actViewPreviousFeed" caption="上一个 Feed (&amp;F)"/>
+			<control name="actViewPreviousUnreadFeed" caption="上一个未读的 Feed (&amp;E)"/>
+			<control name="actViewPrevNewsItem" caption="上一个新闻项 (&amp;N)"/>
+			<control name="actViewPrevUnreadNewsItem" caption="上一个未读的条目 (&amp;U)"/>
+			<control name="actViewBrowserRight" caption="浏览窗口放在右侧 (&amp;R)"/>
+			<control name="actViewBrowserBottom" caption="浏览窗口放在底部 (&amp;B)"/>
+			<control name="actViewFeedBar" caption="显示订阅 (&amp;B)"/>
+			<control name="actViewMySubscriptions" caption="$S_HdrSubscriptions$主页"/>
+			<control name="actViewMemeReport" caption="$S_MemeRptTitle$"/>
+			<control name="actViewDinosaurReport" caption="$S_DinosaurRptTitle$"/>
+			<control name="actViewRecommendationsReport" caption="$S_RecommendationsRptTitle$"/>
+			<control name="actViewAttentionReport" caption="$S_FeedAttentionRptTitle$"/>
+			<control name="actViewHttpErrorReport" caption="$S_HttpErrorRptPageTitle$"/>
+			<control name="actViewFollowedPeopleRpt" caption="显示我关注的人"/>
+			<control name="actViewEventLogReport" caption="$APP_NAME$ 事件日志"/>
+			<control name="actViewCollapseFolders" caption="折叠所有文件夹"/>
+			<control name="actViewHideReadItems" caption="隐藏已读条目"/>
+			<control name="actViewNextFolder" caption="下一个文件夹"/>
+			<control name="actViewPreviousFolder" caption="上一个文件夹"/>
+			<control name="actViewNextUnreadFolder" caption="下一个未读的文件夹"/>
+			<control name="actViewNewsItems" caption="显示新闻项 (&amp;I)"/>
+			<control name="actViewChangeFeedBarPos" caption="更改订阅位置"/>
+			<control name="actViewShowMainMenu" caption="显示主菜单"/>
+			<control name="actViewShowStream" caption="显示 流$IFPRO$"/>
+			<!-- view styles -->
+			<control name="actViewStyleFolders" caption="文件夹视图 (&amp;O)"/>
+			<control name="actViewStyleFeedList" caption="Feed 视图 (&amp;E)"/>
+			<control name="actViewStyleUnreadFeedList" caption="未读的 Feed 视图 (&amp;U)"/>
+			<control name="actViewStyleFlaggedFeedList" caption="已标记的 Feed 视图(&amp;F)"/>
+			<control name="actViewStyleUnreadFolders" caption="未读文件夹视图 (&amp;N)"/>
+			<control name="actViewStyleKeyword" caption="关键词视图 (&amp;K)..."/>
+			<!-- view sorting -->
+			<control name="actViewSortTitle" caption="按标题排序"/>
+			<control name="actViewSortLastPost" caption="按最后发表时间排序"/>
+			<control name="actViewSortAttention" caption="按关注度排序"/>
+			<!-- tool actions -->
+			<control name="actToolsFeedStation" caption="打开 FeedStation (&amp;S)"/>
+			<control name="actToolsCleanupWizard" caption="清理向导 (&amp;U)..."/>
+			<control name="actToolsCancelUpdate" caption="取消更新"/>
+			<control name="actToolsReIndex" caption="重新索引 Feed (&amp;I)"/>
+			<control name="actToolsTestConnection" caption="测试网络连接..."/>
+			<control name="actToolsPanicBtn" caption="按下警报按钮！"/>
+			<control name="actToolsManageTags" caption="管理标签 (&amp;T)..."/>
+			<control name="actToolsUpdateSynchedTags" caption="更新已同步的标签"/>
+			<control name="actToolsEnableGReaderSync" caption="启用同步..."/>
+			<control name="actToolsExportClippings" caption="导出剪报..."/>
+			<control name="actToolsManageContentFilters" caption="内容过滤器..."/>
+			<control name="actToolsFindPeopleToFollow" caption="$S_FindPeopleRptTitle$..."/>
+			<!-- browser actions -->
+			<control name="actBrowseBack" caption="后退 (&amp;B)" hint="返回"/>
+			<control name="actBrowseForward" caption="前进 (&amp;F)" hint="前进"/>
+			<control name="actBrowseRefresh" caption="刷新 (&amp;R)" hint="刷新浏览窗口"/>
+			<control name="actBrowseCloseTab" caption="关闭当前标签页 (&amp;T)"/>
+			<control name="actBrowseReopenClosedTab" caption="重新打开关闭的标签页"/>
+			<control name="actBrowseCloseInactive" caption="关闭其它标签页 (&amp;C)"/>
+			<control name="actBrowseNextTab" caption="下一个浏览器标签页 (&amp;E)"/>
+			<control name="actBrowsePreviousTab" caption="上一个浏览器标签页 (&amp;P)"/>
+			<control name="actBrowseNewTab" caption="新建浏览器标签页 (&amp;N)"/>
+			<control name="actBrowseExternal" caption="在外部浏览器中显示 (&amp;E)"/>
+			<control name="actBrowseStop" caption="停止 (&amp;S)"/>
+			<control name="actBrowseShowFavorites" caption="显示收藏夹"/>
+			<control name="actBrowseHome" caption="浏览器主页 (&amp;H)"/>
+			<control name="actBrowserPrint" caption="打印 (&amp;P)"/>
+			<control name="actBrowseReloadTab" caption="重新加载标签页"/>
+			<control name="actBrowseReloadAllTabs" caption="重新加载所有的标签页"/>
+			<control name="actBrowseZoomIn" caption="$S_ZoomIn$"/>
+			<control name="actBrowseZoomOut" caption="$S_ZoomOut$"/>
+			<control name="actBrowseZoomNormal" caption="缩放 (100%)"/>
+			<!-- folder actions -->
+			<control name="actFolderUpdate" caption="更新文件夹 (&amp;O)"/>
+			<control name="actFolderUpdateAll" caption="更新所有的 Feed (&amp;A)"/>
+			<control name="actFolderRemoveAllMessages" caption="删除文件夹内所有的条目"/>
+			<control name="actFolderMarkAllAsRead" caption="标记文件夹为已读 (&amp;O)"/>
+			<control name="actFolderMarkAllFoldersAsRead" caption="把所有的 Feed 标记为已读 (&amp;A)"/>
+			<control name="actFolderDelete" caption="删除文件夹 (&amp;F)"/>
+			<control name="actFolderMarkAllWatchesAsRead" caption="把所有的监视器标记为已读 (&amp;W)"/>
+			<control name="actFolderMarkAllNewsBinsAsRead" caption="把所有的剪报箱标记为已读 (&amp;C)"/>
+			<control name="actFolderMarkAllSharedItemsRead" caption="把所有的共享文章标记为已读"/>
+			<control name="actFolderProperties" caption="文件夹属性 (&amp;O)"/>
+			<!-- feed actions -->
+			<control name="actFeedHome" caption="Feed 主页 (&amp;O)"/>
+			<control name="actFeedUpdate" caption="$S_UpdateFeed$"/>
+			<control name="actFeedMove" caption="移动 Feed (&amp;M)..."/>
+			<control name="actFeedRemoveAllMessages" caption="删除所有的条目 (&amp;A)"/>
+			<control name="actFeedMarkAsRead" caption="标记 Feed 为已读 (&amp;M)"/>
+			<control name="actFeedEnable" caption="启用"/>
+			<control name="actFeedRerunWatch" caption="重新运行监视器"/>
+			<control name="actFeedCopyXmlUrl" caption="复制 Feed 地址"/>
+			<control name="actFeedCopyHtmlUrl" caption="复制 Feed 主页"/>
+			<control name="actFeedConvertToNonBloglines" caption="转换为非 Bloglines Feed"/>
+			<!-- these two are set dynamically based on the type of feed - see constants section -->
+			<control name="actFeedRemove" caption="取消订阅 (&amp;U)"/>
+			<control name="actFeedProperties" caption="Feed 属性 (&amp;F)"/>
+			<!-- news item actions -->
+			<control name="actNewsToggleRead" caption="切换已读/未读"/>			
+			<control name="actNewsToggleFlag" caption="切换星标 (&amp;F)"/>
+			<control name="actNewsCopyLinkAddress" caption="复制链接 (&amp;L)"/>
+			<control name="actNewsCopyPostToClipboard" caption="复制条目到剪贴板"/>
+			<control name="actNewsRemove" caption="删除条目 (&amp;I)"/>
+			<control name="actNewsSendEMail" caption="邮递此条目 (&amp;E)"/>
+			<control name="actNewsBlogThisDefault" caption="默认的 Blog 发布工具"/>
+			<control name="actNewsShowInExternalBrowser" caption="使用外部浏览器打开链接"/>
+			<control name="actNewsSelectGroup" caption="选择整个群组"/>
+			<control name="actNewsAutoPreview" caption="显示条目描述"/>
+			<control name="actNewsSendToGReader" caption="在 Google Reader 中共享"/>
+			<control name="actNewsSendToGReaderUnshare" caption="停止在 Google Reader 中共享"/>
+			<control name="actNewsSendToGReaderAnnotate" caption="在 Google Reader 中标记并共享"/>
+			<!-- newspaper -->
+			<control name="actNewspaperMarkPageRead" caption="标记当前页面为已读"/>
+			<control name="actNewspaperMarkAllPagesRead" caption="标记所有页面为已读"/>
+			<control name="actNewspaperMarkPageReadAndGotoNext" caption="下一页" hint="标记页面为已读并跳转到下一页"/>
+			<control name="actNewspaperPageNext" caption="下一页 (&amp;N)"/>
+			<control name="actNewspaperPagePrev" caption="上一页 (&amp;P)"/>
+			<control name="actNewspaperReverseSort" caption="反向排序 (&amp;R)"/>
+			<control name="actNewspaperSelectFilter" caption="选择报纸过滤器"/>
+			<control name="actNewspaperExport" caption="导出报纸..."/>
+			<!-- speech actions (unexposed) -->
+			<control name="actSpeechActivePost" caption="朗读当前文章"/>
+			<control name="actSpeechStop" caption="停止朗读"/>
+			<!-- help actions -->
+			<control name="actHelpAbout" caption="关于$APP_NAME$ (&amp;A)"/>
+			<control name="actHelpOnline" caption="在线帮助 (&amp;H)"/>
+			<control name="actHelpShowTutorial" caption="使用教程 (&amp;T)"/>
+			<control name="actHelpCheckForNewVersion" caption="检查新版本 (&amp;V)"/>
+			<control name="actHelpWhatsNew" caption="最新改进？"/>
+			<control name="actHelpPurchase" caption="注册一个序列号（去除广告）..."/>
+			<control name="actHelpDeactivateInstance" caption="取消激活这个 $APP_NAME$ 副本..."/>
+			<control name="actHelpFAQ" caption="$APP_NAME$ 常见问题"/>
+			<control name="actHelpSupport" caption="$APP_NAME$ 技术支持"/>
+			<!-- local search -->
+			<control name="actSearchConvertToNewsBin" caption="转换到剪报箱"/>
+			<control name="actSearchConvertToWatch" caption="转换到监视器"/>
+			<control name="actSearchClear" caption="清除"/>
+			<control name="actSearchSubscriptions" caption="搜索订阅 (&amp;H)..."/>
+			<control name="actSearchNewspaper" caption="搜索报纸..."/>
+			<control name="mnuSearchSubmenu" caption="搜索"/>
+			<!-- inline search -->
+			<control name="actInlineSearchHighlight" caption="高亮全部" hint="高亮所有关键词"/>
+			<control name="actInlineSearchFindNext" caption="下一个" hint="查找下一个"/>
+			<control name="actInlineSearchFindPrev" caption="上一个" hint="查找上一个"/>
+			<control name="actInlineSearchOpen" caption="在本页中查找 (&amp;P)"/>
+			<control name="actInlineSearchClose" caption="关闭即时查找工具"/>
+			<control name="actInlineSearchMove" caption="改变工具位置"/>
+			<!-- stream -->
+			<control name="actStreamMarkAllRead" caption="标记为已读$IFPRO$"/>
+			<control name="actStreamOptions" caption="流选项$IFPRO$"/>
+			<!-- top-level menus -->
+			<control name="mnuFile" caption="文件 (&amp;F)"/>
+			<control name="mnuEdit" caption="编辑 (&amp;E)"/>
+			<control name="mnuView" caption="查看 (&amp;V)"/>
+			<control name="mnuBrowse" caption="浏览 (&amp;B)"/>
+			<control name="mnuTools" caption="工具 (&amp;T)"/>
+			<control name="mnuHelp" caption="帮助 (&amp;H)"/>
+			<!-- menu controls (see also actions) -->
+			<control name="mnuFileNew" caption="新建 (&amp;N)"/>
+			<control name="mnuFileMainMenu" caption="菜单"/>
+			<control name="mnuFileNewFeedDropdown" hint="订阅 Feed"/>
+			<control name="mnuBrowseAddressCombo" caption="网址或搜索语句" hint="输入一个地址（URL）或您希望搜索的语句"/>
+			<control name="mnuNewsAddToNewsBin" caption="加入剪报 (&amp;C)"/>
+			<control name="mnuNewsBinList" caption="剪报"/>
+			<control name="mnuViewColumns" caption="列 (&amp;M)" hint="选择列"/>
+			<control name="mnuGroupBy" caption="分组" hint="按列分组"/>
+			<control name="mnuNewsItemFilterCombo" caption="Filter" hint="根据标题或描述中的关键字过滤"/>
+			<control name="mnuBlogThis" caption="发表 (&amp;B)"/>
+			<control name="mnuBrowseFavorites" caption="收藏 (&amp;F)"/>
+			<control name="mnuBrowseTabbed" caption="标签浏览 (&amp;T)"/>
+			<control name="mnuBrowserZoom" caption="放大 (&amp;Z)oom" hint="放大"/>
+			<control name="mnuViewBrowserPos" caption="浏览位置 (&amp;P)"/>
+			<control name="mnuBrowseHistory" caption="最近页" Hint="最近页面"/>
+			<control name="mnuViewNext" caption="前进 (&amp;N)"/>
+			<control name="mnuViewPrevious" caption="后退 (&amp;V)"/>
+			<control name="mnuLanguage" caption="语言 (&amp;L)"/>
+			<control name="mnuToolsUpdate" caption="刷新 (&amp;U)"/>
+			<control name="mnuFileNewChannel" caption="新订阅 (&amp;S)..."/>
+			<control name="mnuNewsSendTo" caption="发送到"/>
+			<control name="mnuBrowseSharePage" caption="共享" hint="共享此页"/>
+			<control name="mnuViewStyle" caption="视图 (&amp;V)" hint="更改订阅视图"/>
+			<control name="mnuNewspaper" caption="报纸 (&amp;N)"/>
+			<control name="mnuNewspaperFiltersCombo" caption="显示" hint="更改报纸过滤器"/>
+			<control name="mnuFeedCopy" caption="复制"/>
+			<control name="mnuViewSortFeeds" caption="排列 Feed 由"/>
+			<control name="mnuSearchOptions" caption="搜索选项"/>
+			<control name="mnuSearchRecent" caption="最近搜索"/>
+			<control name="mnuSearchEngines" caption="选择搜索提供者"/>
+			<control name="mnuReports" caption="报告 (&amp;R)"/>
+			<control name="mnuInlineSearchEdit" caption="查找" hint="在页面内查找"/>
+			<control name="mnuOptionsSubMenu" caption="选项 (&amp;O)"/>
+			<control name="mnuImportExport" caption="导入/导出"/>
+			<control name="mnuNewspaperStyleList" caption="样式$IFPRO$" hint="更改报纸样式"/>
+			<control name="mnuPNewsGrp_Date" caption="按日期分组"/>
+			<control name="mnuPNewsGrp_Feed" caption="按 Feed 分组"/>
+			<control name="mnuPNewsGrp_Title" caption="按标题分组"/>
+			<control name="mnuPNewsGrp_None" caption="无（不分组）"/>
+			<!-- tray icon menu items -->
+			<control name="mnuPTray_Restore" caption="还原"/>
+			<control name="mnuPTray_Minimize" caption="最小化"/>
+			<!-- IE context menu for fdaction URLs -->
+			<control name="mnuPIE_CopyShortcut" caption="复制快捷方式"/>
+			<control name="mnuPIE_OpenInNewTab" caption="在新标签中打开"/>
+			<control name="mnuPIE_OpenInNewWindow" caption="在新窗口中打开"/>
+			<!-- message that appears when all news items have been hidden by a filter -->
+			<control name="htmlFilterNotice">
+			<![CDATA[<P align="center">这个 Feed 的条目已经被隐藏。<BR>请单击<a href="clear">这里</a>来显示它们。</P>]]>
+			</control>
+			<control name="lblSync" caption="$S_StatusSynchronizing$"/>
+			<control name="btnCancelPrefetch" caption="$S_BtnCancel$"/>
+			<control name="spdHideInfoBar" hint="不再显示此消息"/>
+		</form>
+		<!-- form: move feed -->
+		<form name="fMoveFeedDlg" caption="移动 Feed">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="btnNewFolder" caption="$S_BtnNewFolder$"/>
+			<control name="htmlMove">
+			<![CDATA[把这个 Feed <b>移动</b>到下面所选的<b>文件夹</b>中]]>
+			</control>
+		</form>
+		<!-- form: Add News Bin -->
+		<form name="fAddNewsBinDlg" caption="剪报箱">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="lblTitle" caption="剪报箱"/>
+			<control name="htmlNewsBin">
+				<![CDATA[<b>剪报箱</b>使您能从不同的 Feed 中收集条目。]]>
+			</control>
+			<control name="htmlNewsBinTip">
+				<![CDATA[<b>提示：</b>您也可以把超链接和 $APP_NAME$ 浏览器的分页标签拖进剪报箱。]]>
+			</control>
+			<control name="lblNewsBin" caption="名称"/>
+		</form>
+		<!-- form: Add/Edit content filter -->
+		<form name="fAddContentFilterDlg" caption="内容过滤器">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="lblTitle" caption="内容过滤器"/>
+			<control name="lblName" caption="过滤器名称"/>
+			<control name="btnAddKeyword" caption="$S_BtnAdd$" hint="将关键字加入列表"/>
+			<control name="btnRemoveKeyword" caption="$S_BtnRemove$" hint="将关键字移出列表"/>
+			<control name="lblLocation" caption="搜索关键字"/>
+			<control name="lblKeywords" caption="关键字"/>
+			<control name="chkLocTitle" caption="在条目标题中"/>
+			<control name="chkLocDescription" caption="在条目描述中"/>
+			<control name="chkLocTags" caption="在条目分类中"/>
+			<control name="chkLocAuthor" caption="在条目作者中"/>
+			<control name="optTypeInclude" caption="如果包括以下任意关键字"/>
+			<control name="optTypeExclude" caption="如果不包括以下关键字"/>
+			<control name="htmlFilter">
+				<![CDATA[当收到的<B>新条目</B>包含在使用这个过滤器的 Feed中，自动<B>将其标记为已读</B>：]]>
+			</control>
+			<control name="lblOptions" caption="选项"/>
+			<control name="chkOptWholeWords" caption="匹配整个关键字"/>			
+		</form>
+		<!-- form: manage content filters -->
+		<form name="fManageContentFiltersDlg" caption="内容过滤器">
+			<control name="btnClose" caption="$S_BtnClose$"/>
+			<control name="btnAdd" caption="新建(&amp;N)..."/>
+			<control name="btnEdit" caption="修改(&amp;E)..."/>
+			<control name="btnDelete" caption="删除(&amp;D)..."/>
+			<control name="lblHelp" caption="如何使用内容过滤器？"/>
+		</form>
+		<!-- form: Add/Edit watch -->
+		<form name="fAddWatchDlg" caption="监视器">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="lblTitle" caption="监视器"/>
+			<control name="htmlWatch">
+			<![CDATA[<b>监视器</b>会搜索收到的条目。当 $APP_NAME$ 中的某个 Feed 更新时，监视器就会搜集含有下列输入关键词的条目。]]>
+			</control>
+			<control name="htmlNegMatch">
+				<![CDATA[<b>提示：</b> 要排除条目，在包含它的关键词前放<BR>置一个减号。.]]>
+			</control>
+			<control name="lblName" caption="标题："/>
+			<control name="lblKeywords" caption="监视含有下列关键词的条目："/>
+			<control name="btnAddKeyword" caption="$S_BtnAdd$" hint="添加关键词到列表中"/>
+			<control name="btnRemoveKeyword" caption="$S_BtnRemove$" hint="从列表中删除关键词"/>
+			<control name="lblLocation" caption="搜索关键词："/>
+			<control name="lblOptions" caption="选项："/>
+			<control name="lblStyle" caption="报纸样式$IFPRO$"/>
+			<control name="chkLocTitle" caption="在条目标题中"/>
+			<control name="chkLocDescription" caption="在条目描述中"/>
+			<control name="chkOptWholeWords" caption="全词匹配"/>
+			<control name="chkOptMatchCase" caption="大小写匹配"/>
+			<control name="chkOptMatchAllWords" caption="匹配所有的关键词"/>
+			<control name="lblAutoPurge" caption="存档"/>
+			<control name="lblAutoPurgeMax" caption="保留最近"/>
+			<control name="lblAutoPurgeItems" caption="个条目"/>
+			<control name="chkSelFolders" caption="只限选中的文件夹$IFPRO$"/>
+			<control name="btnSelFolders" caption="选择..."/>
+		</form>
+		<!-- form: Feed Properties -->
+		<form name="fFeedPropertiesDlg" caption="Feed 属性">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="cxTabGeneral" caption="常规"/>
+			<control name="cxTabUpdating" caption="更新"/>
+			<control name="cxTabStats" caption="统计信息"/>
+			<control name="cxTabAdvanced" caption="高级"/>
+			<control name="lblName" caption="名称"/>
+			<control name="lblNewsfeed" caption="Feed 地址"/>
+			<control name="lblHomepage" caption="主页地址"/>
+			<control name="lblAdvanced" caption="高级选项"/>
+			<control name="btnResetTitleAndHomePage" hint="重置 Feed 名称和主页"/>
+			<control name="chkFeedEnabled" caption="启用此 Feed（Feed 如被禁用将不再更新）"/>
+			<control name="chkExcludeFromWatches" caption="将此 Feed 从所有监视器中排除"/>
+			<control name="chkCollectAttention" caption="为此 Feed 收集关注信息"/>
+			<control name="chkShowNewItemAlert" caption="当有新文章到达时包含在桌面提示中"/>
+			<control name="chkShowInStream" caption="包含在我的流中$IFPRO$"/>
+			<control name="chkAutoDownloadEnclosures" caption="自动下载附件/播客$IFPRO$"/>
+			<control name="lblStyle" caption="报纸样式$IFPRO$"/>
+			<control name="htmlSyncAutoUpdate">
+				<![CDATA[已同步的 Feed 会在 $APP_SYNC_PLATFORM$ 发现新内容时更新。]]>
+			</control>
+			<control name="htmlStreamAutoUpdate">
+				<![CDATA[包含在流中的 Feed 将每几分钟自动更新一次。]]>
+			</control>
+			<control name="htmlAutoPurge">
+				<![CDATA[<b>存档</b>]]>
+			</control>
+			<control name="lblAutoPurgeMaxItems" caption="保留最近"/>
+			<control name="lblAutoPurgeItems" caption="个条目"/>
+			<control name="chkAutoPurgeMaxDays" caption="保留最近"/>
+			<control name="lblAutoPurgeDays" caption="天内的条目"/>
+			<control name="chkAutoUpdate" caption="检查新条目每隔"/>
+			<control name="lblAutoUpdateFreq" caption="更新频率"/>
+			<control name="btnValidate" caption="验证..."/>
+			<control name="btnViewSource" caption="查看来源..."/>
+			<control name="lblStats" caption="统计信息"/>
+			<control name="chkAutoUnsub" caption="自动取消订阅在"/>
+			<control name="lblAutoUnsubDays" caption="天内没有更新的 Feed"/>
+			<control name="chkIgnoreDays" caption="忽略超过"/>
+			<control name="lblIgnoreDays" caption="天的旧条目"/>
+			<control name="chkPrefetch" caption="包括在预读范围内"/>
+			<control name="lblContentFilter" caption="内容过滤器"/>
+			<control name="btnAddContentFilter" hint="建立内容过滤器"/>
+			<control name="btnEditContentFilter" hint="修改内容过滤器"/>
+		</form>
+		<!-- form: Options -->
+		<form name="fOptionsDlg" caption="选项">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnClose" caption="$S_BtnCancel$"/>
+			<control name="cxTabGeneral" caption="常规"/>
+			<control name="cxTabAppearance" caption="外观"/>
+			<control name="cxTabAlerts" caption="桌面提示"/>
+			<control name="cxTabReading" caption="浏览"/>
+			<control name="btnSounds" caption="声音..."/>
+			<control name="btnPrefetch" caption="预读..."/>
+			<control name="btnConnection" caption="连接..."/>
+			<control name="btnConfirmations" caption="确认..."/>
+			<control name="btnEnclosures" caption="附件/Podcast..."/>
+			<control name="btnPasswords" caption="密码..."/>
+			<control name="btnApply" caption="应用"/>
+			<control name="lblGeneral" caption="常规"/>
+			<control name="chkAutoUpdate" caption="自动更新 Feed"/>
+			<control name="chkAutoCollapseFolders" caption="自动折叠文件夹"/>
+			<control name="chkAutoStartWithWindows" caption="在 Windows 启动时运行 $APP_NAME$"/>
+			<control name="chkSendNGAttention" caption="发送匿名使用数据"/>
+			<control name="chkMarkAllReadOnFeedChange" caption="当 Feed 更改时标记为已读"/>
+			<control name="lblBrowsing" caption="浏览"/>
+			<control name="lblSystemTray" caption="在系统托盘显示 $APP_NAME$"/>
+			<control name="lblDesktopAlert" caption="显示桌面提示"/>
+			<control name="lblNewspaper" caption="报纸"/>
+			<control name="optSysTrayMinimized" caption="最小化时"/>
+			<control name="optSysTrayAlways" caption="总是"/>
+			<control name="optSysTrayNever" caption="从不"/>
+			<control name="chkMinimizeToTray" caption="关闭时最小化到系统托盘"/>
+			<control name="chkBrowseExternalInDefault" caption="用默认的浏览器打开外部链接而不是在 $APP_NAME$ 中打开"/>
+			<control name="chkBrowseSilent" caption="消除浏览器显示的对话框"/>
+			<control name="lblBrowseNewTabs" caption="打开新的浏览器标签页"/>
+			<!-- <control name="chkBrowseRetainOpenedTabs" caption="记住上次会话时打开的标签页（仅对外部网址有效）"/> -->
+			<control name="lblNewspaperPostsPerPage" caption="每页显示的条目数量"/>
+			<control name="lblAppTheme" caption="主题"/>
+			<control name="lblAppearanceColors" caption="颜色"/>
+			<control name="lblFlaggedColor" caption="为文章加星"/>
+			<control name="lblUnreadColor" caption="未读的条目"/>
+			<control name="lblAppearanceFonts" caption="字体"/>
+			<control name="lblNewspaperFontName" caption="报纸字体"/>
+			<control name="lblNewsItemFontName" caption="新闻项字体"/>
+			<control name="btnResetAppearance" caption="重置为默认值"/>
+			<control name="chkAlertMinimized" caption="仅在 $APP_NAME$ 最小化时显示桌面提示"/>
+			<control name="optAlertNever" caption="从不"/>
+			<control name="optAlertAuto" caption="接收到新条目时"/>
+			<control name="optAlertMinutes" caption="每隔"/>
+			<control name="lblAlertMinutes" caption="分钟"/>
+			<control name="btnAlertChooseFeeds" caption="选择 Feed (&amp;F)..." hint="选择要在桌面提示中显示的 Feed"/>
+			<control name="chkNewspaperLargerFont" caption="增加报纸视图中字体大小"/>
+			<control name="chkNewspaperEnableEmbeds" caption="启用视频和其它嵌入内容"/>
+			<control name="chkNewspaperLowBandwidth" caption="为低带宽优化（删除所有图片）"/>
+			<control name="chkNewspaperShowThumbnails" caption="显示摘要缩略图"/>
+			<control name="lblAutoBrowse" caption="直接转到条目链接"/>
+		</form>
+		<!-- form: Options | Passwords -->
+		<form name="fOptionsPasswordsDlg" caption="密码">
+			<control name="btnClose" caption="$S_BtnClose$"/>
+			<control name="btnEdit" caption="编辑 (&amp;E)"/>
+			<control name="btnDelete" caption="删除 (&amp;D)"/>
+			<control name="btnAdd" caption="添加 (&amp;A)..."/>
+			<control name="tabFeeds" caption="Feed"/>
+			<control name="tabServices" caption="服务"/>
+		</form>
+		<!-- form: Options / Sounds -->
+		<form name="fOptionsSoundsDlg" caption="声音">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="btnEditSound" caption="编辑声音..."/>
+			<control name="htmlSounds">
+			<![CDATA[<B>声音设置</B><BR><BR>请在您想要启用的事件声音上勾选复选标记。要更改事件提示音，请选中它后再点击【编辑<BR>声音】按钮。]]></control>
+		</form>
+		<!-- form: Options / Sounds / Edit Sound -->
+		<form name="fEditSoundDlg" caption="编辑声音">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="btnFile" hint="选择声音文件"/>
+			<control name="btnTest" caption="测试"/>
+		</form>
+		<!-- form: Options / Connection -->
+		<form name="fOptionsConnectionDlg" caption="连接">
+			<control name="lblConnection" caption="连接设置"/>
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="btnTestConnection" caption="测试连接 (&amp;T)..."/>
+			<control name="lblTimeout" caption="超时（秒）"/>
+			<control name="optProxyNone" caption="无代理服务器"/>
+			<control name="optProxyAutoDetect" caption="自动检测代理设置（推荐）"/>
+			<control name="optProxyCustom" caption="使用自定义代理设置"/>
+			<control name="lblProxyServer" caption="代理服务器"/>
+			<control name="lblProxyPort" caption="端口"/>
+			<control name="lblProxyUser" caption="用户名"/>
+			<control name="lblProxyPwd" caption="密码"/>
+			<control name="chkProxyBypassLocal" caption="对本地网址不使用代理服务器"/>
+		</form>
+		<!-- form: Options / Confirmation -->
+		<form name="fOptionsConfirmationsDlg" caption="确认">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="btnReset" caption="重置到默认值"/>
+			<control name="lblTitle" caption="请勾选您想要启用的条目。"/>
+		</form>
+		<!-- form: Options / Enclosures -->
+		<form name="fOptionsEnclosuresDlg" caption="附件/Podcasts">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="lblSafeList" caption="允许的附件"/>
+			<control name="optSafeList" caption="允许访问的附件类型（推荐）"/>
+			<control name="optNoSafeList" caption="允许访问所有不可执行的附件"/>
+			<control name="lblEnclosureAction" caption="当附件被点击时"/>
+			<control name="lblHelp" caption="什么是附件？"/>
+			<control name="btnFeedStation" caption="打开 FeedStation..."/>
+			<control name="optAct_AddToQueue" caption="将它添加到我的 FeedStation 下载队列"/>
+			<control name="optAct_Navigate" caption="立即打开"/>
+		</form>
+		<!-- form: Options / Desktop Alert -->
+		<form name="fOptionsDesktopAlertDlg" caption="自定义桌面提示">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="htmlWithAlert">
+				<![CDATA[要<b>包含</b>在桌面提示中的 Feed]]>
+			</control>
+			<control name="htmlWithoutAlert">
+				<![CDATA[要<b>排除</b>在桌面提示外的 Feed]]>
+			</control>
+		</form>
+		<!-- form: Options / Newspaper Icons -->
+		<form name="fOptionsNwspIconsDlg" caption="报纸图标">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="btnReset" caption="默认"/>
+			<control name="htmlCaption">
+				<![CDATA[选择要出现在 $APP_NAME$ <b>报纸</b>中每个条目标题下方的<b>图标</b>。]]>
+			</control>
+		</form>
+		<!-- form: stream options -->
+		<form name="fOptionsStreamDlg" caption="配置流">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="chkStayOnTop" caption="非停靠状态下将流保持在其它应用程序之上"/>
+			<control name="lblKeyword" caption="按关键词过滤 Feed"/>
+			<control name="lblWatches" caption="将这些监视器也包括在我的流中"/>
+			<control name="lblHelp" caption="什么是我的流？"/>
+			<control name="htmlCaption">
+				<![CDATA[Your <b>流</b>显示过去<b>24 小时</b>中这些 Feed 中所有<b>加星</b>以及<b>未读</b>的文章。]]>
+			</control>
+		</form>
+		<!-- form: Cleanup Wizard -->
+		<form name="fCleanupWizardDlg" caption="清理向导">
+			<control name="lblTitle" caption="清理向导"/>
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="btnSelFolders" caption="选择 (&amp;S)..."/>
+			<control name="chkDate" caption="删除超过"/>
+			<control name="lblDaysOld" caption="天的条目"/>
+			<control name="chkMax" caption="只保留最近"/>
+			<control name="lblItems" caption="个条目"/>
+			<control name="chkExcludeUnread" caption="不删除未读的条目"/>
+			<control name="chkExcludeFlagged" caption="不删除已标记的条目"/>
+			<control name="chkExcludeTagged" caption="不删除有标签的条目"/>
+		</form>
+		<!-- form: Keyboard Shortcuts -->
+		<form name="fKeyboardShortcutsDlg" caption="快捷键">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="btnAssign" caption="设置"/>
+			<control name="btnReset" caption="重置默认值..."/>
+			<control name="tabStandard" caption="标准"/>
+			<control name="tabNewspaper" caption="报纸"/>
+			<control name="lblInvalidShortcut" caption="无效的快捷键"/>
+			<control name="lblNwspSpacebar" caption="空格键 ="/>
+			<control name="htmlNwspTitle">
+				<![CDATA[这些快捷键仅当焦点切换到 <b>报纸</b> 时可用：<br><ul><li>Ctrl+ ↓/↑ = 下一个/上一个条目</li><li>Ctrl+→/← = 下一页/上一页</li><li>Enter = 显示或展开条目</li></ul>]]>
+			</control>
+			<control name="htmlNwspSubtitle">
+				<![CDATA[这些 <B>单键</B> 报纸快捷方式也可以自定义：]]>
+			</control>
+			<control name="htmlNwspHint" caption="要改变某个快捷键，从上面选取然后按下指定的键。  要删除某个快捷键，选取后按下 Delete 键。"/>
+			<control name="htmlNwspInvalid" caption="很遗憾，只有字母键和数字键才能设为快捷键。"/>
+		</form>
+		<!-- form: BlogThis Apps -->
+		<form name="fBlogThisAppsDlg" caption="Blog 发布工具">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="btnEdit" caption="$S_BtnEdit$"/>
+			<control name="btnRemove" caption="$S_BtnRemove$"/>
+			<control name="btnAdd" caption="$S_BtnAdd$"/>
+			<control name="btnAutoDetect" caption="自动检测..."/>
+		</form>
+		<!-- form:  Add/Edit BlogThis applications -->
+		<form name="fBlogThisAppEditDlg" caption="编辑 Blog 发布工具">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="lblName" caption="名称(&amp;N)"/>
+			<control name="lblCmdLine" caption="命令行或网址 (&amp;C)"/>
+			<control name="chkDefault" caption="设为默认值 (&amp;D)"/>
+			<control name="htmlBlogThisTokens">
+				<![CDATA[当通过 URL 发布时以下这些参数可以被添加到命令行。  要自定义桌面 Blog 发布工具的发布格式，请编辑 $APP_NAME$ 子目录中的 <a href="edit:blogthis">BlogThis.dat</a> 文件。]]>
+			</control>
+		</form>
+		<form name="fTutorialDlg" caption="$APP_NAME$ 教程">
+			<control name="btnBack" caption="$S_BtnBack$"/>
+			<control name="btnNext" caption="$S_BtnNext$"/>
+			<control name="btnClose" caption="$S_BtnClose$"/>
+			<control name="htmlWelcome">
+				<![CDATA[<b>欢迎使用 $APP_NAME$ - 我们希望您享受到使用它的乐趣，就像我们享受开发它的乐趣一样！</b><BR><BR>如果这是您第一次使用 $APP_NAME$，我们建议您在开始使用前<BR>先查看一下教程。<BR><BR>单击【下一步】开始教程，或者单击【跳过】来略过教程并开始使用 $APP_NAME$。]]>
+			</control>
+			<control name="lblWhatsRss" caption="什么是 RSS？"/>
+			<control name="htmlWhatsRss">
+				<![CDATA[<B>RSS</B> 是一种简单的格式，能够让您即时获取网站的更新内容。您不用再定期浏览您喜欢的网<BR>站来查看它们是否更新，而只需要<B>订阅</B>，然后它们会自动通知您。<BR><BR>和电子邮件不同，它是完全<B>私密</B>的 —— 您所订阅的网站不会得到您的任何信息，同时您可以随时取消订阅。]]>
+			</control>
+			<control name="lblFeedsAndFolders" caption="Feed 和文件夹"/>
+			<control name="htmlFeedsAndFolders">
+			<![CDATA[所谓的 <b>Feed</b> 就是条目（文章）的来源。举例来说，纽约时报的 <B>RSS Feed</B> 就包含了最新的几则新闻报导。 所谓的<b>文件夹</b>则是 Feed 的群组。您可以使用文件夹来对您的 Feed 进行分类整理。<br><br>$APP_NAME$ 的 <b>Feed 栏</b>会显示出您所有的 Feed 和文件夹。]]>
+			</control>
+			<control name="lblNewspapers" caption="报纸"/>
+			<control name="htmlNewspapers">
+			<![CDATA[当您选择了一个 Feed 或文件夹时，$APP_NAME$ 会将报纸过滤器筛选过的条目以<b>报纸</b>的<BR>形式显示以便于阅读。<BR><BR>而<b>报纸过滤器</b>则用来决定哪些条目被显示（默认情况下只显示已标记的或未读的条目）。]]>
+			</control>
+			<control name="lblWatches" caption="监视器"/>
+			<control name="htmlWatches">
+			<![CDATA[<b>监视器</b>会按照您的关键词搜索收到的条目，提醒您是否含有您所感兴趣的主题。<br><br>监视器也会出现在 Feed 栏。]]>
+			</control>
+			<control name="lblFinished" caption="完成"/>
+			<control name="htmlFinished">
+			<![CDATA[$APP_NAME$ 的内容远比这个教程中所提到的多，我们只描述了其中基本的概念。  如果您想要再次查看这个教程，可以从【帮助】菜单中找到。<br><br>感谢您使用 $APP_NAME$！]]>
+			</control>
+			<control name="lblTags" caption="标签"/>
+			<control name="htmlTags">
+				<![CDATA[<B>标签</B> 使您能在条目上加注您自己的关键词以便分类和查找。  要为某个条目加上标签，只需在 FeedDemon 报纸中点击该条目标题下的 <IMG src="idx:81"> Tag 图标即可。<BR><BR>点击 Feed 栏上的标签图标则会显示由所有包含该标签的条目形成的报纸。]]>
+			</control>
+			<control name="lblSync" caption="同步"/>
+			<control name="htmlSync">
+			<![CDATA[<B>同步</B>使您能够在多台计算机上阅读您的 Feed 而不会重复。  您在一台计算机上阅读过的条目在您所使用的任意一台计算机上都会显示为已读。<BR><BR>要启用特定文件夹的同步功能，请选择<B> 编辑 | 文件夹属性</B>。<BR><BR><b>提示：</b> $APP_NAME$ 更新同步 Feed 的速度会<b>更快</b>，所以即使您只使用一台计算机仍建议您启<BR>用此功能。<BR><BR><a href="url:syncinfo">请告诉我更多有关于同步的信息</a>]]>
+			</control>
+		</form>
+		<!-- form: startup wizard -->
+		<form name="fStartupWizard" caption="$APP_NAME$">
+			<control name="btnNext" caption="$S_BtnNext$"/>
+			<control name="btnAbort" caption="退出(&amp;Q)"/>
+			<control name="lblHdrChooseSync" caption="$S_GoogleReader$ 同步"/>
+			<control name="lblHdrSubs" caption="订阅"/>
+			<control name="lblHdrChooseSyncFolders" caption="选择要同步的文件夹"/>
+			<control name="optChooseSyncFolders_All" caption="同步所有文件夹"/>
+			<control name="optChooseSyncFolders_Selected" caption="同步以下选取的文件夹"/>
+			<control name="lblHdrFinished" caption="完成"/>
+			<control name="lblHdrConvertGR" caption="转换到与 $S_GoogleReader$ 同步"/>
+			<control name="lblStatusMayTakeAMinute" caption="（这可能花费几分钟时间）"/>			
+			<control name="hoptChooseSync_Google" caption="是的，启用同步"/>
+			<control name="hoptChooseSync_None" caption="不，不使用同步"/>
+			<control name="htmlChooseSyncFolders">
+				<![CDATA[选择您想与 $S_GoogleReader$ 同步的<B>文件夹</B>。]]>
+			</control>
+			<control name="htmlWelcome">
+				<![CDATA[<B>感谢试用 $APP_NAME$ - 我们希望您享受到使用它的乐趣，就<BR>像我们享受开发它的乐趣一样！</B><BR><BR>如果这是您第一次使用 $APP_NAME$，我们建议您在开始使用前先<BR><a href="tutorial">查看一下教程</a>。或者单击<B>下一步</B>开始使用。]]>
+			</control>
+			<control name="htmlChooseSync">
+				<![CDATA[与 <B>$S_GoogleReader$</B> <B>同步</B>使您能够在多台计算机上阅读您的 Feed 而不会重复。  您在一台计算机上阅读过的文章在您所使用的任意<BR>一台计算机上都会显示为已读。<BR><BR>启用同步，$APP_NAME$ 会<B>更快</B>，所以即使您只使用一台计算机仍<BR>建议您启用此功能。<BR><BR><a href="syncinfo">请告诉我更多有关于同步的信息</a>]]>
+			</control>
+			<control name="htmlChooseSyncNote">
+				<![CDATA[<B>注意：</B> 如果您不确定这里的含义，而想在超过一台计算机上使用 $APP_NAME$，请直接选择【是】。 您可以稍后在任何时候改变选择。]]>
+			</control>
+			<control name="htmlSubs">
+				<![CDATA[您是否想要 $APP_NAME$ 将 Feed 加入您的订阅？]]>
+			</control>
+			<control name="optSubs_Default">
+				<![CDATA[<B>是</B>，给我默认的订阅列表作为开始]]>
+			</control>
+			<control name="optSubs_None">
+				<![CDATA[<B>否</B>，目前不要给我订阅任何东西]]>
+			</control>
+			<control name="optSubs_Import">
+				<![CDATA[从以下来源<B>导入</B>我的订阅]]>
+			</control>
+			<control name="lblOpmlFile" caption="OPML 文件名或网址"/>
+			<control name="htmlFinished">
+				<![CDATA[好的，我们已经完成配置！  点击<b>完成</b>来关闭向导并开始使用 $APP_NAME$。]]>
+			</control>
+			<control name="htmlFinishedChooseSync">
+				<![CDATA[好的，我们已经完成配置！  点击<b>完成</b>来关闭向导并开始使用同步的 $APP_NAME$。]]>
+			</control>
+			<control name="htmlConvertGR">
+				<![CDATA[NewsGator 提供的同步功能将于2009年8月31日<A href="http://blogs.newsgator.com/daily/2009/07/newsgator-consumer-rss-reader-product-changes-google-sync.html">停止服务</A>。  <BR><BR>如果您想继续享受同步带来的便利，您可以将您的 NewsGator 订阅转向与 Google Reader 同步。]]>
+			</control>
+			<control name="optConvertGR_ConvertNow" caption="现在就转换到与 $S_GoogleReader$ 同步"/>
+			<control name="optConvertGR_ConvertPrivate" caption="我不想与 $S_GoogleReader$ 同步"/>
+			<control name="optConvertGR_ConvertAlready" caption="我已经转换到与 $S_GoogleReader$ 同步"/>
+			<control name="htmlConvertGRHelp">
+				<![CDATA[<IMG src="idx:31"> 不明白以上的含义？请<a href="grconvertinfo">浏览我们的网站</a>以获得更多信息。]]>
+			</control>
+		</form>
+		<!-- form: HTML message dialog ( "Don't show this again" dialog) "note" is the default caption -->
+		<form name="fHtmlMessageDlg" caption="提示">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="chkDisable" caption="以后不再显示此信息 (&amp;D)"/>
+		</form>
+		<!-- feed validation error -->
+		<form name="fValidationErrDlg" caption="Feed 包含错误">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="chkShowAgain" caption="在加入 Feed 之前先显示包含的错误"/>
+			<control name="htmlCaption">
+
+			<![CDATA[此 Feed 包含错误。  $APP_NAME$ 会尝试解决这些错误，但是这个 Feed 可能需要其作者的修复才能正确显示。<BR><BR>如果您就是这个 Feed 的作者，我们建议您 <a href="validate">用 Feed 验证器来检查它</a>并修正所有报告的问题。]]>
+			</control>
+			<!-- note: details button uses S_BtnShowDetails and S_BtnHideDetails constants -->
+		</form>
+		<!-- note that form caption isn't used -->
+		<form name="fDesktopAlert">
+			<control name="lblTitle" caption="$APP_NAME$"/>
+			<control name="mnuPOpt_Options" caption="桌面提示选项 (&amp;O)..."/>
+			<control name="mnuPOpt_MarkFeedsAsRead" caption="把所有的 Feed 标记为已读 (&amp;M)d"/>
+		</form>
+		<form name="fManageCacheDlg" caption="管理缓存文件夹">
+			<control name="htmlTitle">
+			<![CDATA[$APP_NAME$ 的<b>缓存文件夹</b> 包含您的 Feed 数据库和已下载的条目。]]>
+			</control>
+			<control name="htmlNote">
+			<![CDATA[<b>注意：</b>如果缓存文件夹被更改，$APP_NAME$ 必须重新启动。]]>
+			</control>
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="btnChange" caption="更改 (&amp;C)..."/>
+			<control name="btnExplore" caption="浏览 (&amp;X)"/>
+			<control name="btnReindex" caption="扫描错误"/>
+			<control name="btnCompact" caption="压缩"/>
+			<control name="btnBackup" caption="备份 (&amp;B)..."/>
+		</form>
+		<!-- form: GR synchronization options -->
+		<form name="fOptionsGRSyncDlg" caption="同步选项">
+			<control name="lblTitle" caption="$S_GoogleReader$ 同步"/>
+			<control name="tabOptions" caption="选项"/>
+			<control name="tabAccount" caption="账号"/>
+			<control name="tabFolders" caption="文件夹"/>
+			<control name="lblPollingFreq" caption="每隔"/>
+			<control name="lblPollingFreqMinutes" caption="分钟更新我的 Feed"/>
+			<control name="chkRememberLogin" caption="记住我的登录信息（不勾选则在启动时询问）"/>
+			<control name="lblResetSync" caption="重新同步"/>
+			<control name="btnResetSync" caption="立即重新同步 (&amp;R)"/>
+			<control name="htmlResetSync">
+				<![CDATA[重新与 $S_GoogleReader$ 同步并修正与 $APP_NAME$ 不一致的未读条目记数。]]>
+			</control>			
+			<control name="lblRemoveAcct" caption="删除账号"/>
+			<control name="btnRemoveAcct" caption="现在删除(&amp;R)..."/>
+			<control name="htmlRemoveAcct">
+				<![CDATA[从 $APP_NAME$ 删除您的 $S_GoogleReader$ 账号并禁用同步。]]>
+			</control>			
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="lblChangeAcct" caption="更改账号"/>
+			<control name="btnChangeAcct" caption="现在更改..."/>
+			<control name="htmlChangeAcct" caption="与其他的 $S_GoogleReader$ 账号同步。"/>
+			<control name="htmlSyncFolders">
+				<![CDATA[<B>勾选的</B>文件夹将与 $S_GoogleReader$ 同步]]>
+			</control>			
+			<control name="btnFolders_All" caption="所有"/>
+			<control name="btnFolders_None" caption="无"/>
+			<control name="btnFolders_Apply" caption="应用..."/>
+		</form>
+		<form name="fImportFeedsDlg" caption="导入 Feed">
+			<control name="lblStart" caption="导入 Feed"/>
+			<control name="htmlStart">
+			<![CDATA[<b>您想要导入什么</b>？]]>
+			</control>
+			<control name="htmlFinish">
+			<![CDATA[<b>完成</b><BR><BR>请单击【完成】来导入所选的 Feed]]>
+			</control>
+			<control name="htmlOpml">
+			<![CDATA[<b>下列这些 Feed 不存在于您的订阅中。</b><br><br>请选择您想要导入的 Feed。]]>
+			</control>
+			<control name="htmlDestination">
+			<![CDATA[<b>目标文件夹</b>]]>
+			</control>
+			<control name="optSrcOpml" caption="导入一个 OPML 文件"/>
+			<control name="optSrcRecommended" caption="导入推荐的 Feed"/>
+			<control name="optSrcExternal" caption="从外部来源导入"/>
+			<control name="optDestSelectedFolder" caption="导入到下列选中的文件夹中"/>
+			<control name="optDestSeparateFolders" caption="导入并重建文件夹结构"/>
+			<control name="btnSelectAll" caption="全部"/>
+			<control name="btnUnselectAll" caption="无"/>
+			<control name="btnNewFolder" caption="$S_BtnNewFolder$"/>
+			<control name="btnPreview" caption="预览"/>
+			<control name="btnBack" caption="$S_BtnBack$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="chkSyncNewFolders" caption="由导入产生的同步文件夹"/>
+		</form>
+		<form name="fExportFeedsDlg" caption="导出订阅">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="btnAll" caption="全部"/>
+			<control name="btnNone" caption="无"/>
+			<control name="lblFormat" caption="导出为"/>
+			<control name="lblTitle" caption="请选择您想导出的文件夹"/>
+			<control name="chkExcludeSecure" caption="不包括保密的 Feed"/>
+		</form>
+		<form name="fExportTopFeedsDlg" caption="导出热门 Feed">
+			<control name="btnOK" caption="$S_BtnOK$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="lblTitle" caption="用我最关注的 Feed 生成 OPML 文件"/>
+			<control name="lblNumToExport" caption="您希望 OPML 中包含多少个 Feed？"/>
+			<control name="chkExcludeSecure" caption="不包括保密的 Feed"/>
+		</form>
+		<form name="fAddFeedDlg" caption="订阅">
+			<control name="lblStart" caption="订阅一个 Feed"/>
+			<control name="lblTitle" caption="标题"/>
+			<control name="lblFinish" caption="完成"/>
+			<control name="lblKeywordSearch" caption="关键词搜索"/>
+			<control name="lblFindFeeds" caption="查找新的 Feed"/>
+			<control name="btnBack" caption="$S_BtnBack$"/>
+			<control name="btnNext" caption="$S_BtnNext$"/>
+			<control name="btnCancel" caption="$S_BtnCancel$"/>
+			<control name="btnNewFolder" caption="$S_BtnNewFolder$"/>
+			<control name="btnPreview" caption="预览"/>
+			<control name="btnPreviewFindFeeds" caption="预览"/>
+			<control name="chkShowProperties" caption="我要编辑此 Feed 的属性"/>
+			<control name="chkVerifyNewsfeed" caption="订阅此 Feed 前先检查错误"/>
+			<control name="btnFindFeeds" caption="查找 (&amp;F)"/>
+			<control name="txtFindFeedsKeyword" hint="输入一个关键词或词组，然后单击【查找】按钮"/>
+			<control name="btnFindFeedsAgain" caption="查找 (&amp;F)"/>
+			<control name="mnuPFF_CopyXmlUrl" caption="将 Feed 地址复制到剪贴板"/>
+			<control name="htmlUrlOrKeyword">
+				<![CDATA[请输入 <B>URL</B>，或<B>关键词</B> 来订阅<B>搜寻 Feed</B>：]]>
+			</control>
+			<control name="htmlTip">
+				<![CDATA[<b>提示：</b> 可以输入网站的首页地址来尝试<B>自动发现</B>包含的 Feed]]>
+			</control>			
+			<control name="htmlSearchEngine">
+				<![CDATA[选择一个搜索引擎来订阅 <b>搜寻 Feed</b>，这种 Feed 包含所有网页中和此关键词相关的文章]]>
+			</control>			
+			<control name="htmlFindFeeds">
+				<![CDATA[您也可以点击<B>查找</B>来搜寻和此关键词相关的<b>新 Feed</b>]]>
+			</control>
+			<control name="htmlFindFeedsResults">
+				<![CDATA[<B>勾选</B>您想要<B>订阅</B>的 Feed，然后单击下一步。]]>
+			</control>
+			<control name="htmlTitle">
+			<![CDATA[请输入这个 Feed 的<b>标题</b>]]>
+			</control>
+			<control name="htmlDestFolder">
+			<![CDATA[请选择要存放此 Feed 的<b>文件夹</b>]]>
+			</control>
+			<control name="htmlFinish">
+			<![CDATA[请点击<b>完成</b>来将这个 Feed 添加到您的订阅中。]]>
+			</control>
+		</form>
+	<form name="fAddFolderDlg" caption="新建文件夹">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+	 	<control name="lblFolderName" caption="文件夹名称"/>
+	 	<control name="chkSynchronize" caption="将这个文件夹与 $APP_SYNC_PLATFORM$ 同步"/>
+	</form>
+	<!-- form: folder properties -->
+	<form name="fFolderPropertiesDlg" caption="文件夹属性">
+		<control name="lblGeneral" caption="常规"/>
+	 	<control name="lblFolderName" caption="文件夹名称"/>
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+		<control name="chkShowNewItemAlert" caption="新条目到达时包含在桌面提示中"/>
+		<control name="chkFolderEnabled" caption="启用此文件夹（如果禁用 Feed 将不再更新）"/>
+		<control name="chkExcludeFromWatches" caption="将此文件夹排除出所有的监视器"/>
+		<control name="chkCollectAttention" caption="从此文件夹收集关注数据"/>
+		<control name="tabSettings" caption="设置"/>
+		<control name="tabUpdating" caption="更新"/>
+		<control name="tabAdvanced" caption="高级"/>
+		<control name="tabStats" caption="统计信息"/>
+		<control name="htmlAutoPurge">
+			<![CDATA[<b>存档</b> <a href="help:autopurge">(?)</a>]]>
+		</control>
+		<control name="lblAutoPurgeMaxItems" caption="每个 Feed 保留最近"/>
+		<control name="lblAutoPurgeItems" caption="个条目"/>
+		<control name="chkAutoPurgeMaxDays" caption="保留最近"/>
+		<control name="lblAutoPurgeDays" caption="天的条目"/>		
+		<control name="chkAutoUpdate" caption="检查新条目每隔"/>
+		<control name="lblAutoUpdateFreq" caption="更新频率"/>
+		<control name="lblStyle" caption="报纸样式"/>
+		<control name="htmlSyncAutoUpdate">
+			<![CDATA[被同步的 Feed 将在 $APP_SYNC_PLATFORM$ 发现有新内容时被更新。]]>
+		</control>		
+	 	<control name="chkSynchronize" caption="将这个文件夹与 $APP_SYNC_PLATFORM$ 同步"/>
+  		<control name="lblAdvanced" caption="高级选项"/>
+		<control name="chkAutoDownloadEnclosures" caption="自动下载附件（Podcasts）"/>
+		<control name="lblStats" caption="统计信息"/>
+		<control name="chkPrefetch" caption="包括在预读范围内"/>
+		<control name="chkIgnoreDays" caption="忽略超过"/>
+		<control name="lblIgnoreDays" caption="天的条目"/>		
+	</form>
+	<!-- form: root folder properties -->
+	<form name="fRootFolderPropertiesDlg" caption="根文件夹">
+		<control name="btnApplyToRoot" caption="仅应用到根文件夹中的 Feed"/>
+		<control name="btnApplyToAll" caption="应用到所有文件夹中的所有 Feed"/>
+		<control name="htmlInfo">
+			<![CDATA[这是您的<b>根</b>文件夹。  您想要把这些更改只应用到您的根文件夹中的 Feed，还是应用到所有文件夹中的所有 Feed？]]>
+		</control>
+	</form>
+	<!-- form: failed to add feeds to synched folder - see also S_FailedFeedsCaption -->
+	<form name="fFailedFeedsDlg" caption="添加 Feed 时出错">
+		<control name="htmlInfo">
+			<![CDATA[<B>添加 Feed 时出错</B><BR><BR>$APP_NAME$ 无法将这些 Feed 添加到您的 $APP_SYNC_PLATFORM$ 订阅中。  这可能是由于这些 Feed 包含错误，或 Feed 无法被外部服务器下载。]]>
+		</control>
+		<control name="btnOK" caption="$S_BtnOK$"/>		
+		<control name="lblOption" caption="您想要如何处理？"/>
+		<control name="optRevertToPrivate" caption="不同步此文件夹"/>
+		<control name="optDeleteFeeds" caption="删除这些 Feed，然后开始同步此文件夹"/>
+	</form>
+	<!-- form: feeds that failed to be imported -->
+	<form name="fFailedImportDlg" caption="导入 Feed">
+		<control name="htmlInfo">
+			<![CDATA[<B>导入 Feed 时出错</B><BR><BR>$APP_NAME$ 无法导入以下的 Feed：]]>
+		</control>
+		<control name="btnOK" caption="$S_BtnOK$"/>
+	</form>
+	<!-- form: feeds that no longer exist in GR -->
+	<form name="fDeletedFeedsDlg" caption="修改订阅">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="htmlCaption">
+			<![CDATA[这些 Feed 已经不存在于您的 $S_GoogleReader$ 订阅中并将从 $APP_NAME$ 中被<B>删除</B>。  请<B>勾选</B>您想在接下来保留的。]]>
+		</control>	
+	</form>
+	<!-- form: generic status dialog -->
+	<form name="fStatusDlg" caption="$APP_NAME$"/>
+	<!-- form: login dialog -->
+	<form name="fLoginDlg" caption="$APP_NAME$">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+		<control name="lblUserName" caption="用户名"/>
+		<control name="lblPassword" caption="密码"/>
+		<!-- note that htmlLogin is set dynamically - see const S_SecureFeedLoginMsg, S_EditSecureFeedLoginMsg, S_NewSecureFeedLoginMsg -->
+	</form>
+	<!-- form: change cache folder -->
+	<form name="fChangeCacheDlg" caption="更改缓存文件夹">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+		<control name="lblChangeCache" caption="更改缓存"/>
+		<control name="optMove" caption="移动缓存到新的位置，然后删除现有的缓存"/>
+		<control name="optCopy" caption="复制缓存到新的位置, 原样保留现有的缓存"/>
+		<control name="optChange" caption="更改缓存的存放位置, 但不复制或移动任何文件"/>
+		<control name="htmlNote">
+			<![CDATA[<B><FONT color="#FF0000">重要</FONT></B>： 仅在您下次使用 $APP_NAME$ 前，打算从另一台计算机上把缓存数据复制到这个新位置时，才应该选择 <B>更改</B>。]]>
+		</control>
+	</form>
+	<!-- form: connection error - error text defined in const section -->
+	<form name="fConnectionErrDlg" caption="连接失败">
+		<control name="btnClose" caption="$S_BtnClose$"/>
+		<control name="btnTestConnection" caption="测试连接 (&amp;T)..."/>
+		<control name="chkDontShowAgain" caption="隐藏连接错误信息直到下次运行 $APP_NAME$"/>
+	</form>
+	<!-- form: feed preview -->
+	<form name="fFeedPreviewDlg" caption="预览 Feed">
+		<control name="btnClose" caption="$S_BtnClose$"/>
+	</form>
+	<!-- form: web search engine selection -->
+	<form name="fChooseSearchEngineDlg" caption="选择一个搜索引擎">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>	
+	</form>
+	<!-- form: connection test -->
+	<form name="fConnectionTestDlg" caption="连接测试">
+		<control name="btnStart" caption="开始 (&amp;S)"/>
+		<control name="btnClose" caption="$S_BtnClose$"/>
+		<control name="lblConnectionTest" caption="$APP_NAME$ 连接测试"/>			
+		<control name="htmlConnectionErr" caption=""/>
+		<control name="htmlTestConnection">
+			<![CDATA[<p>在开始这个测试前，请<a href="showexternalsite">点击这个链接</a>来打开您的浏览器，确定您拥有一个<br>通向 Internet 的<B>活动连接</B>。<br><br>如果您的浏览器显示类似以下信息，那么可能是您网络连接的问题，而与 $APP_NAME$ 无关。</p><ul><li>该页无法显示</li><li>浏览被取消</li><li>无法连接到远程服务器</li></ul>]]>
+		</control>
+	</form>
+	<!-- form: confirmation dialog (message text set at runtime) -->
+	<form name="fAppConfirmationDlg" caption="$S_Confirmation$">
+	 	<control name="btnYes" caption="$S_BtnYes$"/>
+	 	<control name="btnNo" caption="$S_BtnNo$"/>
+		<control name="chkDontAskAgain" caption="下次不再询问 (&amp;A)"/>	
+	</form>
+	<!-- form: find people to follow -->
+	<form name="fFindPeopleDlg" caption="查找想关注的人">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>	
+		<control name="lblTitle" caption="查找想关注的人"/>
+		<control name="htmlFind">
+			<![CDATA[在下面输入一个姓名、地址、公司名称、职业或兴趣来<BR>查找<B>你要关注的人</B>。]]>
+		</control>		
+	</form>
+	<!-- form: search newspaper -->
+	<form name="fSearchNewspaperDlg" caption="搜索报纸">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>	
+		<control name="lblTitle" caption="搜索报纸"/>
+		<control name="chkNewTab" caption="Open results in a new tab"/>
+		<control name="htmlCaption">
+			<![CDATA[Search all articles in this <b>newspaper</b> for the <b>keyword</b> below]]>
+		</control>		
+	</form>
+	<!-- form: search subscriptions -->
+	<form name="fSearchSubsDlg" caption="搜索订阅">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>	
+		<control name="lblTitle" caption="搜索订阅"/>
+		<control name="lblSearchWhere" caption="选择文件夹"/>
+		<control name="lblSearchFor" caption="搜索"/>
+		<control name="lblSearchWhen" caption="发表时间"/>
+		<control name="lblSearchOptions" caption="选项"/>
+		<control name="chkLocTitle" caption="搜索条目标题"/>
+		<control name="chkLocDescription" caption="搜索条目描述"/>
+		<control name="chkOptWholeWords" caption="仅匹配整个关键词"/>
+		<control name="chkOptUnreadOnly" caption="只搜索未读的条目"/>
+		<control name="chkOptFlaggedOnly" caption="只搜索已标记条目"/>		
+		<control name="chkNewTab" caption="在新标签页中打开结果"/>
+	</form>
+	<!-- working offline dialog (prompt to connect) -->
+	<form name="fOfflineDlg" caption="脱机工作">
+	 	<control name="btnYes" caption="$S_BtnYes$"/>
+	 	<control name="btnNo" caption="$S_BtnNo$"/>
+		<control name="chkDontAskAgain" caption="下次不再询问"/>
+		<!-- htmlOffline is set from S_DlgOfflinePromptToConnect or S_DlgOfflinePageUnavailable -->
+	</form>
+	<!-- prefetch options -->
+	<form name="fOptionsPrefetchDlg" caption="预读选项">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+		<control name="btnOptions" caption="选项..."/>
+		<control name="lblPrefetchHelp" caption="什么是预读？"/>
+		<control name="lblMaxPosts" caption="最大预读条目数"/>
+		<control name="lblMaxKB" caption="跳过大于"/>
+		<control name="lblKB" caption="KB的条目"/>
+		<control name="lblMaxDays" caption="不预读超过"/>
+		<control name="lblDays" caption="天的条目"/>
+		<control name="tabOptions" caption="设置"/>
+		<control name="tabFeeds" caption="Feed"/>
+		<control name="lblOptions" caption="预读条目时使用以下选项"/>
+		<control name="lblFeeds" caption="选择要包含在预读中的 Feed"/>
+		<control name="btnFeedsAll" caption="全部"/>
+		<control name="btnFeedsNone" caption="无"/>
+	</form>
+	<!-- displayed before manual prefetch -->
+	<form name="fPrefetchDlg" caption="预读未读条目">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+		<control name="lblPrefetch" caption="预读未读条目"/>
+		<control name="lblPrefetchHelp" caption="什么是预读？"/>
+		<control name="btnOptions" caption="选项..."/>
+		<control name="chkOffline" caption="预读完毕后进入脱机工作"/>
+		<control name="chkPrefetchFlagged" caption="预读包括已加星标的条目"/>
+	</form>
+	<!-- custom filters (in progress) -->
+	<form name="fCustomFilterDlg" caption="自定义过滤器">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+		<control name="lblName" caption="名称"/>
+		<control name="lblMatch" caption="匹配"/>
+		<control name="optMatchAll" caption="下列所有条件"/>
+		<control name="optMatchAny" caption="下列条件之一"/>
+	</form>
+	<!-- keyword view dialog -->
+	<form name="fKeywordViewDlg" caption="关键词查看">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+
+		<control name="chkWholeWords" caption="仅匹配整个关键词"/>
+		<control name="htmlCaption">
+			<![CDATA[请输入要出现在每个 Feed 标题中的<B>关键词</B>]]>
+		</control>	
+	</form>
+	<!-- file error dialog -->
+	<form name="fFileErrDlg" caption="文件错误">
+		<control name="btnAbort" caption="$S_BtnAbort$"/>
+		<control name="btnIgnore" caption="$S_BtnIgnore$"/>
+		<control name="btnRetry" caption="$S_BtnRetry$"/>
+		<control name="chkHide" caption="Don't show me any more file errors this session"/>
+	</form>
+	<!-- panic button dialog -->
+	<form name="fPanicBtnDlg" caption="警报按钮">
+		<control name="btnOK" caption="按下警报按钮！ (&amp;H)"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+		<control name="btnOptions" caption="选项 (&amp;O)..."/>
+		<control name="lblMarkRead" caption="标记为已读"/>
+		<control name="htmlPanic">
+			<![CDATA[这不是电子邮件 - 您<B>不必</B>每篇都要阅读。  也许现在就<BR>应该<b>按下警报按钮</b>让 $APP_NAME$ 帮您把这些条目标记为已读？]]>
+		</control>
+	</form>
+	<!-- panic button dialog (GR version) -->
+	<form name="fPanicBtnDlgGR" caption="您有很多内容需要阅读！">
+		<control name="btnOK" caption="现在标记为已读"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+		<control name="lblMarkRead" caption="标记为已读"/>
+		<control name="chkNeverShowAgain" caption="不要再显示此消息"/>
+		<control name="htmlPanic">
+			<![CDATA[将这么多的未读条目同步需要一些时间 - 还好，您不需要全部阅读它们。<BR><BR>为什么不让 $APP_NAME$ 在 $S_GoogleReader$ 中为您将旧条目标记为已读呢？]]>
+		</control>
+	</form>
+	<!-- panic button options dialog -->
+	<form name="fPanicBtnOptionsDlg" caption="警报按钮选项">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+		<control name="chkAutoShow" caption="当我到达此数量时，显示&quot;警报按钮&quot;提示"/>
+		<control name="lblAutoShow" caption="个未读条目目"/>
+		<control name="chkSelFolders" caption="仅限选中的文件夹"/>
+		<control name="btnSelFolders" caption="选择 (&amp;S)..."/>
+	</form>
+	<!-- select default clippings folder -->
+	<form name="fSelectDefaultNewsBinDlg" caption="选择剪报箱">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>	
+	</form>
+	<!-- form:password query dialog -->
+	<form name="fPasswordQueryDlg" caption="密码">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>		
+	</form>
+	<!-- form:generic feed list (various uses) -->
+	<form name="fGenericFeedListDlg" caption="$S_Information$">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>	
+	</form>
+	<!-- form:edit tags -->
+	<form name="fEditTagsDlg" caption="标签">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+		<control name="btnManageTags" caption="管理标签..."/>
+		<control name="lblTitle" caption="修改标签"/>
+		<control name="lblTag" caption="输入以半角逗号分隔的标签（例如： tag1,tag2）"/>
+		<control name="lblTagList" caption="点击来加入已经使用过的标签"/>
+		<control name="lblSuggestedTags" caption="建议的标签"/>
+		<control name="btnClearTags" hint="清除标签"/>
+	</form>
+	<!-- form:manage tags -->
+	<form name="fManageTagsDlg" caption="管理标签">
+		<control name="btnClose" caption="$S_BtnClose$"/>
+		<control name="btnRename" caption="重命名..."/>
+		<control name="btnDelete" caption="删除..."/>
+	</form>
+	<!-- form: rename tag -->
+	<form name="fRenameTagDlg" caption="重命名标签">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+		<control name="htmlCaption">
+			<![CDATA[输入一个<B>新标签名</B>，或选择一个<B>已经存在的标签名</B>以便将条目从一个标签移到另外一个。]]>
+		</control>
+	</form>
+	<!-- form: select folders -->
+	<form name="fSelectFoldersDlg" caption="选择文件夹">
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+		<control name="btnAll" caption="全部"/>
+		<control name="btnNone" caption="无"/>	
+	</form>
+	<!-- form: Google Account -->
+	<form name="fGoogleAccountDlg" caption="$S_GoogleReader$">
+		<control name="htmlTitle">
+			<![CDATA[<B>请输入您的 <a href="url:greader-home">$S_GoogleReader$</a> 信息。</B><BR><BR>也就是您登入 Gmail 和其他 Google 服务所用的信息。]]>	
+		</control>
+		<control name="lblUserName" caption="用户名 (&amp;U)"/>
+		<control name="lblPassword" caption="密码 (&amp;P)"/>
+		<control name="chkRememberLogin" caption="记住我的登录信息"/>
+		<control name="lblCreateAcct" caption="创建 Google 账户"/>
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+	</form>
+	<!-- form: annotate post -->
+	<form name="fAnnotatePostDlg" caption="标注并共享">
+		<control name="btnOK" caption="共享 (&amp;S)"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>
+	</form>
+	<!-- form: export event log -->
+	<form name="fEventLogExportDlg" caption="Export Event Log">
+		<control name="htmlTitle">
+			<![CDATA[$APP_NAME$ 的<B>事件记录</B>可能需要被提交到我们的技术支持团队以便于我们<BR>解决您报告的问题。]]>	
+		</control>
+		<control name="chkErrorsOnly" caption="只导出错误记录"/>
+		<control name="chkCurrentSession" caption="只导出当前进程"/>
+		<control name="btnOK" caption="$S_BtnOK$"/>
+		<control name="btnCancel" caption="$S_BtnCancel$"/>		
+	</form>
+	<!-- form: purchase serial number -->
+	<form name="fPurchaseDlg" caption="升级到专业版！">
+		<control name="btnClose" caption="$S_BtnClose$"/>
+		<control name="btnValidate" caption="校验 (&amp;V)"/>
+		<control name="lblEnterSerial" caption="如果您已有序列号，请在这里输入："/>
+		<control name="htmlLostSerial">
+			<![CDATA[<A href="url:lostserial">序列号丢失了？</A>]]>
+		</control>
+		<control name="htmlPurchase">
+			<![CDATA[FeedDemon 现有两个版本 - FeedDemon <B>Pro</B>（专业版） 和 FeedDemon <B>Lite</B>（精简版）。<BR><BR>专业版包含更多的特性且不显示在免费的精简版中出现的广告 (<a href="url:gopro">了解更多</a>)。]]>
+		</control>
+	</form>
+	<!-- form: certificate error dialog -->
+	<form name="fCertificateErrDlg" caption="安全证书错误">
+		<control name="lblTitle" caption="这个站点的安全证书有问题。"/>
+		<control name="btnOK" caption="仍然继续"/>
+		<control name="btnCancel" caption="不再继续"/>
+	</form>
+</forms>	
+<!-- 
+***************************
+*** SECTION II: DIALOGS ***
+***************************
+-->
+<dialogs>
+	<dialog name="S_DlgConfirmUnsubscribe">
+		要取消订阅 "%s" 吗？
+	</dialog>
+	<dialog name="S_DlgConfirmUnsubscribeMulti">
+		要取消订阅所选的 Feed 吗？
+	</dialog>
+	<dialog name="S_DlgConfirmUnsubscribeWithTags">
+		这将会删除 %s 个有标签的条目。  确定吗？
+	</dialog>
+	<dialog name="S_DlgConfirmUnsubscribeSelected">
+		要取消订阅所选的 Feed 吗？
+	</dialog>
+	<dialog name="S_DlgConfirmRemoveNewsBin">
+		删除剪报箱将无法恢复。您确定要删除这个剪报箱吗？
+	</dialog>
+	<dialog name="S_DlgConfirmRemoveWatch">
+		删除监视器将无法恢复。您确定要删除这个监视器吗？
+	</dialog>
+	<dialog name="S_DlgConfirmMultiFolderDelete">
+		您已经选择要删除下列文件夹：\n\n%s\n\n这个操作将取消订阅这些文件夹中的所有 Feed 并不可撤销。\n您确定要这么做吗？
+	</dialog>
+	<dialog name="S_DlgConfirmRerunWatch">
+		是否要清除这个监视器中的条目然后再次运行监视？
+	</dialog>
+	<dialog name="S_DlgConfirmMarkFolderAsRead">
+		是否要把文件夹 "%s" 中的所有 Feed 都标记为已读？
+	</dialog>
+	<dialog name="S_DlgConfirmMarkAllFoldersAsRead">
+		是否要把所有文件夹中的所有 Feed 都标记为已读？
+	</dialog>
+	<dialog name="S_DlgConfirmMarkAllWatchesAsRead">
+		是否要把所有的监视器都标记为已读？
+	</dialog>
+	<dialog name="S_DlgConfirmMarkAllNewsBinsAsRead">
+		是否要把所有的剪报箱都标记为已读？
+	</dialog>
+	<dialog name="S_DlgConfirmMarkStreamAsRead">
+		是否要把您流中包含的所有文章标记为已读？
+	</dialog>
+	<dialog name="S_DlgConfirmClearAllFeeds">
+		要从当前文件夹中移除所有的条目吗？
+	</dialog>
+	<dialog name="S_DlgConfirmClearFeed">
+		要从当前 Feed 中移除所有的条目吗？
+	</dialog>
+	<dialog name="S_DlgConfirmMarkAllPagesRead">
+		要把全部页面标记为已读吗？
+	</dialog>
+	<dialog name="S_DlgConfirmChooseSyncPlatform">
+		您正在没有享受同步便利的情况下使用 $APP_NAME$！\n\n同步使您能够在任意一台计算机上访问您的 Feed，并使 $APP_NAME$ 更快。\n\n您现在是否要启用同步？
+	</dialog>
+	<dialog name="S_DlgConfirmDeleteTag">
+		是否要从所有条目中删除 "%s" 标签？
+	</dialog>	
+	<dialog name="S_DlgConfirmDeleteAllTags">
+		这将从所有订阅中删除所有标签。  继续吗？
+	</dialog>	
+	<dialog name="S_DlgConfirmDeleteAllTagsNG">
+		您是否也想从 $APP_SYNC_PLATFORM$ 删除所有的标签？
+	</dialog>
+	<dialog name="S_DlgErrGRTagRenameFailed">
+		$S_GoogleReader$ 重命名此标签失败。\n\n(Status %d)
+	</dialog>
+	<dialog name="S_DlgFeedTitleExists">
+		您已经订阅了一个具有相同标题的 Feed。  请选择一个不同的标题。
+	</dialog>
+	<dialog name="S_DlgFeedTitleExistsInFolder">
+		同名的 Feed 已经存在于文件夹 "%s" 中。  请选择一个不同的标题。
+	</dialog>
+	<dialog name="S_DlgFeedUrlExistsInFolder">		
+		"%s" 文件夹中已经存在这个 Feed 的订阅。  您想要重新订阅吗？ 
+	</dialog>
+	<dialog name="S_DlgNewsBinTitleExists">
+		已经存在同名的剪报箱。
+	</dialog>
+	<dialog name="S_DlgNewsBinTitleExistsSynched">
+		已经存在跟所选文件夹同名的剪报箱。
+	</dialog>
+	<dialog name="S_DlgConfirmUnsyncSharedNewsBin">
+		停用此剪报箱的同步将删除其中共享的 RSS Feed。  您确定要这么做吗？
+	</dialog>
+	<dialog name="S_DlgConfirmUnshareNewsBin">
+		停止共享此剪报箱将影响所有订阅它 RSS Feed 的用户。  您确定要这么做吗？
+	</dialog>
+	<dialog name="S_DlgWatchTitleExists">
+		已经存在同名的监视器。
+	</dialog>
+	<dialog name="S_DlgFeedTitleExistsInSelectedFolder">
+		同名的 Feed 已经存在于所选的文件夹中。
+	</dialog>
+	<dialog name="S_DlgUniqueFeedName">
+		<![CDATA[Feed 标题必须是<b>唯一</b>的。  既然您已经选择不复制现有的 Feed，那么您必须为这个 Feed 提供一个唯一的标题。]]>
+	</dialog>
+	<dialog name="S_DlgFolderExists">
+		已经存在同名的文件夹。
+	</dialog>
+	<dialog name="S_DlgConfirmDeleteNewsItems">
+		要删除所选的条目吗？
+	</dialog>
+	<dialog name="S_DlgWatchLocationRequired">
+		请选择这个监视器将搜索关键词的位置。
+	</dialog>
+	<dialog name="S_DlgWatchNoKeywords">
+		请为这个监视器输入一个或更多的关键词。
+	</dialog>
+	<dialog name="S_DlgErrUnknownFeedFormat">
+		未知的 Feed 格式： %s
+	</dialog>
+	<dialog name="S_DlgErrCacheDirNotFound">
+		找不到 $APP_NAME$ 的缓存文件夹 - 这个文件夹用于存放您的订阅。\n\n+ 单击【确定】选择另一个缓存文件夹\n+ 单击【取消】退出 $APP_NAME$
+	</dialog>
+	<!-- ex: Invalid watch file version (2.0)\n\n[MyWatch.rssw] -->
+	<dialog name="S_DlgErrInvalidDataFileVersion">
+		无效的 %s 文件版本 (%s)。\n\n[%s]
+	</dialog>
+	<dialog name="S_DlgErrUnableToAutoDiscoverNewsfeed">
+		无法定位 Feed。  如果这个网站包含 Feed，那么这个 Feed 可能无效或无法被自动发现。
+	</dialog>
+	<dialog name="S_DlgConfirmSubscribeToCookieAuthFeed">
+   	这个 Feed 使用 Cookie 来进行验证，这就是说只有当您在浏览器中登录相应网站时才能下载该 Feed。  除此之外，用 Cookie 进行验证的 Feed 也 *不能* 加入与 $APP_SYNC_PLATFORM$ 同步的文件夹。\n\n您还要订阅这个 Feed 吗？
+	</dialog>
+	<dialog name="S_DlgErrDownloadFailed">
+		$APP_NAME$ 无法下载 %s。  请确定 URL 是正确的，并且您的防火墙允许访问这个地址。
+	</dialog>
+	<dialog name="S_DlgLocationInfoHtml">
+		<![CDATA[<b>位置</b>用于表明您访问 Feed 使用的某一计算机或设备。<BR><BR>每个运行 $APP_NAME$ 的计算机都应使用一个唯一的位置名称。  例如，您家中的计算机就应该<BR>和您工作用的计算机使用不同的位置进行表示。]]>
+	</dialog>
+	<dialog name="S_DlgSubscriptionListDownloadFailed">
+		$APP_NAME$ 无法下载您的订阅列表。  请确定您的登录信息是正确的。
+	</dialog>
+	<dialog name="S_DlgErrInvalidOpml">
+		这个文件不是一个有效的 OPML 文件，或者是一个不包含 Feed 列表的 OPML 文件
+	</dialog>
+	<dialog name="S_DlgErrNoNewsfeedsInValidOpml">
+		这个 OPML 文件没有包含任何 Feed。  它可能是空的，或者不是包含 Feed 的 OPML 文件类型。
+	</dialog>
+	<dialog name="S_DlgErrImportCommonFeedList">
+		$APP_NAME$ 无法导入您的公共 Feed 列表。  最有可能的原因是您还没有订阅过任何 Feed。
+	</dialog>
+	<dialog name="S_DlgErrImportServiceOpml">
+		$APP_NAME$ 无法导入您的 %s 订阅。
+	</dialog>
+	<dialog name="S_DlgErrImportOpmlLogin">
+		$APP_NAME$ 无法导入您的 %s 订阅。  可能需要您先用 Internet Explorer 登入 %s 然后 $APP_NAME$ 才能访问订阅。\n\n您是否要现在访问 %s 主页以便登录？
+	</dialog>
+	<dialog name="S_DlgImportOpmlAfterLogin">		
+		当您登录 %s 后，请返回 $APP_NAME$ 并尝试重新导入。\n\n注意：登录前请确定选中 "%s" 。
+	</dialog>
+	<dialog name="S_DlgErrImportRssBanditOpml">
+		$APP_NAME$ 无法导入您的 RSS Bandit 订阅列表。  您可能需要重新安装 RSS Bandit 来纠正这个问题。
+	</dialog>
+	<dialog name="S_DlgErrImportGoogleReaderOpml">
+		$APP_NAME$ 无法导入您的 $S_GoogleReader$ 订阅。
+	</dialog>
+	<dialog name="S_DlgErrImportEmptyServiceOPML">
+		您的 %s 订阅为空，因此没有什么可以被导入。	
+	</dialog>
+	<dialog name="S_DlgErrRestoreSubscriptionList">
+	 	您的订阅列表为空或者已损坏。  您想要利用最近的订阅备份恢复吗？
+	</dialog>
+	<dialog name="S_DlgErrUnknownFeedType">
+		未知的 Feed 类型。
+	</dialog>
+	<dialog name="S_DlgErrRssNoChannelNode">
+		RSS 文件没有包含任何 &lt;channel&gt;.
+	</dialog>
+	<dialog name="S_DlgCleanupComplete">
+		清理向导已经删除了 %s 个条目。
+	</dialog>
+	<dialog name="S_DlgReassignShortcut">
+		这个快捷键已经被设定为 "%s"。  您要重新设定吗？
+	</dialog>
+	<dialog name="S_DlgResetShortcuts">
+		要把所有快捷键重置为默认值吗？
+	</dialog>
+	<dialog name="S_DlgNoDefaultBlogThis">
+		尚未设置默认的 Blog 发布工具。  您想要现在设置吗？
+	</dialog>
+	<dialog name="S_DlgConfirmBlogThisAutoDetect">
+		这将会用一款 $APP_NAME$ 能够自动检测的发布工具替换当前的发布工具列表。  继续吗？
+	</dialog>
+	<dialog name="S_DlgErrLiveWriter">
+		$APP_NAME$ 无法启动 Windows Live Writer。  您可能需要重新安装 Windows Live Writer 来纠正这个问题。
+	</dialog>
+	<dialog name="S_DlgWelcomeCancel">
+		即使您以前使用过 $APP_NAME$，我们仍然强烈建议您跟随此向导继续。  您确定要关闭它吗？
+	</dialog>
+	<dialog name="S_DlgWelcomeNoFeedsSelected">
+		您尚未选择任何 Feed。  无论如何继续吗？
+	</dialog>
+	<dialog name="S_DlgErrSaveFile">
+		无法保存文件 "%s"。
+	</dialog>
+	<dialog name="S_DlgErrFeedStationNotFound">
+		在您的计算机上没有找到 FeedStation。
+	</dialog>	
+	<dialog name="S_DlgConfirmDownloadDataFile">
+		是否下载 "%s" %s？
+	</dialog>
+	<dialog name="S_DlgConfirmDownloadDataReplace">
+		%s已经存在。  要替换它吗？
+	</dialog>
+	<dialog name="S_DlgConfirmApplyDownloadLang">
+		您想要现在就切换到这个语言吗？
+	</dialog>
+	<dialog name="S_DlgDownloadDataFileCompleted">
+		下载完成。
+	</dialog>	
+	<dialog name="S_DlgFileExists">
+		文件 "%s" 已经存在。  要覆盖它吗？
+	</dialog>
+	<dialog name="S_DlgFileNotFound">
+		找不到文件。
+	</dialog>
+	<dialog name="S_DlgErrInvalidXmlFile">
+		文件 "%s" 不是一个有效的 XML 文件且不能被 $APP_NAME$ 读取。  为继续运行，$APP_NAME$ 必须删除这个文件。\n\n[%s]
+	</dialog>
+	<dialog name="S_DlgErrRecoveredInvalidXmlFile">
+		文件 "%s" 已损坏（可能由系统崩溃引起），但 $APP_NAME$ 能还原其部分内容。
+	</dialog>
+	<dialog name="S_DlgInvalidNewspaperStyle">
+		$APP_NAME$ 无法载入报纸样式 "%s"。  这个样式仅适用于较早版本的 $APP_NAME$。
+	</dialog>
+	<dialog name="S_DlgInfoFeedsDisabledInUpdate">
+	 	<![CDATA[在更新您的 Feed 时，$APP_NAME$ 发现其中一部分已经不存在了。  您仍可以阅读这些 Feed 中先前已被下载的条目，但是它们将不再继续更新并且被显示为禁用（灰色）状态。]]>
+	</dialog>
+	<dialog name="S_DlgInfoTranslateNonSyncPost">
+		这个条目包含在未与 $S_GoogleReader$ 同步的 Feed 中，$APP_NAME$ 将转向 Google 翻译来进行转译。
+	</dialog>
+	<dialog name="S_DlgConfirmCloseWhenDownloadActive">
+		关闭 $APP_NAME$ 将取消所有正在进行的下载。  是否继续？	
+	</dialog>
+	<dialog name="S_DlgMakeDefaultAggregator">
+		$APP_NAME$ 不是您的默认 Feed 阅读程序。  您想要把它设为默认吗？
+	</dialog>
+	<dialog name="S_DlgErrRegistryException">
+		$APP_NAME$ 无法写入 Windows 注册表。  您可能需要在管理员权限下运行 $APP_NAME$ 来修改这个设置。
+	</dialog>
+	<dialog name="S_DlgRunNewWatch">
+		您想要在现有的条目中运行此监视器吗？
+	</dialog>
+	<dialog name="S_DlgNoSafeList">
+		尽管这个选项已经阻止了可执行的附件，但仍可能有不安全的文件（例如，被感染的 Microsoft Office 文档）被下载到您的系统中。\n\n您还想要启用这个选项吗？	
+	</dialog>
+	<dialog name="S_DlgCacheFolderChanged">
+		缓存文件夹已经被成功更改，需要重启软件才能生效。  请点击 $S_BtnOK$ 关闭 $APP_NAME$。
+	</dialog>
+	<dialog name="S_DlgCacheFolderCopyFailed">
+		$APP_NAME$ 无法将文件复制到选定的文件夹。  请确认您对所选的文件夹拥有完全的 读取/写入权限。
+	</dialog>
+	<dialog name="S_DlgConfirmResetAllToolbars">
+		是否要将所有的工具栏重置到默认状态？
+	</dialog>
+	<dialog name="S_DlgNoNewsItemSelected">
+		使用此功能需要在新闻项列表中选中一个条目。
+	</dialog>
+	<dialog name="S_DlgConfirmResetAttention">
+		要重置 %s 的关注度吗？
+	</dialog>
+	<dialog name="S_DlgConfirmResetAttentionAll">
+		为所有 Feed 重置关注度？
+	</dialog>
+	<dialog name="S_DlgConfirmPrefetchBeforeGoingOffline">
+		在进入脱机工作模式前您是否要预读未读条目？
+	</dialog>
+	<dialog name="S_DlgConfirmSharePrivatePost">
+		这个条目看来是私密的。  您仍然要共享它吗？
+	</dialog>
+	<dialog name="S_DlgConfirmAddInvalidFeed">
+		在添加 Feed 前显示验证错误。
+	</dialog>
+	<dialog name="S_DlgConfirmReEnableAutoUpdate">
+		Feed 自动更新已被禁用。  是否要重新启用？
+	</dialog>
+	<dialog name="S_DlgBlockedEnclosure">
+		这个附件类型已经被 $APP_NAME$ 屏蔽。  要自定义允许的附件类型，请单击 $APP_NAME$ 选项中的【附件】按钮。\n\n(%s).
+	</dialog>
+	<dialog name="S_DlgFeatureRequiresNGAccount">
+		这项功能需要 $APP_NG_VERSION$ 帐号。  您想要现在建立帐号吗？
+	</dialog>
+	<dialog name="S_DlgNGActivationFailed">
+		我们感到十分抱歉，但 $APP_NAME$ 无法被启用。\n\n原因： %s.
+	</dialog>
+	<dialog name="S_DlgNGLoginIncorrect">
+		您的 $APP_SYNC_PLATFORM$ 登录信息似乎不正确。  请检查您是否输入了正确的用户名和密码。
+	</dialog>
+	<dialog name="S_DlgNGCreateLocationFailed">
+		$APP_NAME$ 无法创建此位置。
+	</dialog>
+	<dialog name="S_DlgNGGetUserInfoFailed">
+		$APP_NAME$ 无法访问此帐号。\n\n请检查您是否输入了正确的用户名和密码。
+	</dialog>	
+	<dialog name="S_DlgNGChangeUserPasswordFailed">
+		$APP_NAME$ 无法更改您的 $APP_NG_VERSION$ 密码。
+	</dialog>
+	<dialog name="S_DlgNGCreateUserAccountFailed">
+		$APP_NAME$ 无法建立此帐号。
+	</dialog>
+	<dialog name="S_DlgNGCreateUserAccountFailed_UserExists">
+		抱歉 - 此用户名已被使用。  请选择一个不同的用户名。
+	</dialog>
+	<dialog name="S_DlgNGErrAddFeedFailed">
+		$APP_NAME$ 无法将此 Feed 添加到您的 $APP_SYNC_PLATFORM$ 订阅中。 此 Feed 可能有错误，或已不存在。
+	</dialog>
+	<dialog name="S_DlgNGErrAddPrivateFeedFailed">
+		$APP_NAME$ 无法将此 Feed 添加到您的 $APP_SYNC_PLATFORM$ 订阅中。  在您本地计算机或局域网内的 Feed 无法被 $APP_SYNC_PLATFORM$ 访问。
+	</dialog>	
+	<dialog name="S_DlgSyncErrAddFolderFailed">
+		$APP_NAME$ 无法将此文件夹添加到您的 $APP_SYNC_PLATFORM$ 订阅中。
+	</dialog>
+	<dialog name="S_DlgNGErrRenameFolderFailed">
+		$APP_NAME$ 无法在您的 $APP_SYNC_PLATFORM$ 订阅中重命名此文件夹。
+	</dialog>
+	<dialog name="S_DlgNGErrDeleteSubFailed">
+		$APP_NAME$ 无法从您的 $APP_SYNC_PLATFORM$ 订阅中删除此 Feed。
+	</dialog>
+	<dialog name="S_DlgNGErrGetSubscriptionListFailed">
+		$APP_NAME$ 无法获得您的 $APP_SYNC_PLATFORM$ 订阅。
+	</dialog>
+	<dialog name="S_DlgNGErrGetClipFoldersFailed">
+		$APP_NAME$ 无法获得您的 $APP_NG_VERSION$ 剪报箱。
+	</dialog>
+	<dialog name="S_DlgNGNoClipFoldersExist">
+		您在 $APP_NG_VERSION$ 中没有任何剪报箱。
+	</dialog>
+	<dialog name="S_DlgNGEmptySubscriptionList">
+		您的 $APP_SYNC_PLATFORM$ 订阅中没有任何 Feed。
+	</dialog>
+	<dialog name="S_DlgHtmlNGConvertToNGFolderSuccess">
+		<![CDATA[现在这个文件夹已经<b>同步</b>，您添加到这个文件夹的 Feed 将被自动地添加到 $APP_SYNC_PLATFORM$。<br><br>同样的，您从这个文件夹删除的 Feed 也将会从 $APP_SYNC_PLATFORM$被删除。]]>
+	</dialog>
+	<dialog name="S_DlgNGConfirmToPrivateFolder">
+		关闭这个文件夹的同步将会把它从 $APP_SYNC_PLATFORM$中删除。  是否继续？
+	</dialog>
+	<dialog name="S_DlgFeedSearchUnavailable">
+		抱歉，我们的 Feed 搜索功能现在不可用。  请稍后再试。
+	</dialog>
+	<dialog name="S_DlgFeedSearchResultsEmpty">
+		没有找到匹配的 Feed。
+	</dialog> -->
+	<dialog name="S_DlgFeedKeywordResultsEmpty">
+		没有找到匹配的 Feed。
+	</dialog>	
+	<dialog name="S_DlgAutoPurgeHelp">
+		这个设置让您控制 $APP_NAME$ 如何从缓存中自动删除条目。\n\n为了尽量减小缓存 Feed 所需的磁盘空间，我们建议您为每个 Feed 最多保留200个条目，并且最多不超过60天。\n\n请注意标记过的和/或加上了标签的条目将不会被自动删除。
+	</dialog>	
+	<dialog name="S_DlgErrValueNotInRange">
+		这个值必须介于 %d 和 %d 之间。
+	</dialog>
+	<dialog name="S_DlgOverwriteFDSubscriptions">
+		您所选的 OPML 文件用于存储您的 $APP_NAME$ 订阅。  相信我，您不会想要改写这个文件。
+	</dialog>
+	<dialog name="S_DlgNGSyncAllFoldersErr">
+		$APP_NAME$ 无法同步您的 %d 文件夹中的 Feed。  通常的原因是：\n\n* 实际的 Feed 错误\n* 有密码保护的 Feed\n* 不能从您的网络外部访问的 Feed\n* 正在同步的 Feed 或文件夹已经存在于 $APP_SYNC_PLATFORM$ 中
+	</dialog>
+	<dialog name="S_DlgSubscribedToAllFeedsInOpml">
+		$APP_NAME$ 已经订阅了这些列表中的所有 Feed。
+	</dialog>
+	<dialog name="S_DlgConfirmDeleteLogin">
+		要删除所选的登录信息吗？
+	</dialog>
+	<dialog name="S_DlgConfirmFeedAutoUnsub">		
+		启用这个选项将在取消订阅这个 Feed 时不出现警告。  继续吗？
+	</dialog>
+	<dialog name="S_DlgNewVersion">
+		发现新版（%s）的 $APP_NAME$！  是否到我们的网站上查看详细信息？
+	</dialog>
+	<dialog name="S_DlgNoNewVersion">
+		当前没有新版的 $APP_NAME$ 可用。
+	</dialog>
+	<dialog name="S_DlgConfirmDisableSync">
+		当同步功能被关闭时，$APP_NAME$ 将需要更长的时间来更新 Feed。  除此之外，您在已同步文件夹中所阅读的条目也将不会在 $APP_SYNC_PLATFORM$ 被标记为已读，直到您重新启用同步功能为止。\n\n您确定要关闭同步功能吗？
+	</dialog>
+	<dialog name="S_DlgActionRequiresSync">
+		这个操作要求启用同步。  您是否要启用同步功能？
+	</dialog>
+	<dialog name="S_DlgErrReEnableSyncFailed">
+		同步功能由于连接问题不能被重新启用。  您想要运行连接测试吗？
+	</dialog>
+	<dialog name="S_DlgConfirmTestConnection">
+		$APP_NAME$ 连接到 %s 时遇到问题。  您想要运行连接测试吗？
+	</dialog>
+	<!-- used by fOfflineDlg -->
+	<dialog name="S_DlgOfflinePromptToConnect">
+		$APP_NAME$ 当前处于脱机工作模式。  您要回到在线模式吗？
+	</dialog>
+	<dialog name="S_DlgOfflinePageUnavailable">
+		您想看的网页无法脱机浏览。  您要回到在线模式吗？
+	</dialog>
+	<dialog name="S_DlgNowWorkingOffline">
+		$APP_NAME$ 当前处于脱机工作模式。  要回到在线模式，请在【文件】菜单中取消选择【脱机工作】。
+	</dialog>
+	<dialog name="S_DlgErrUnableToClipPost">
+		$APP_NAME$ 无法将此条目加入 $APP_SYNC_PLATFORM$。
+	</dialog>
+	<dialog name="S_DlgCantAddToGRSharedItemsOffline">
+		$APP_NAME$ 在脱机工作模式下无法将此条目加入共享。  您要回到在线模式吗？
+	</dialog>
+	<dialog name="S_DlgErrUnableToClipPostList">
+		$APP_NAME$ 无法将这些条目加入 $APP_SYNC_PLATFORM$。
+	</dialog>
+	<dialog name="S_DlgErrUnableToCreateClipFolder">
+		$APP_NAME$ 无法在 $APP_NG_VERSION$ 上建立此剪报箱。
+	</dialog>
+	<dialog name="S_DlgErrUnableToRenameClipFolder">
+		$APP_NAME$ 无法在 $APP_NG_VERSION$ 上更改此剪报箱名称。
+	</dialog>
+	<dialog name="S_DlgErrUnableToDeleteClipFolder">
+		$APP_NAME$ 无法在 $APP_NG_VERSION$ 上删除此剪报箱。
+	</dialog>
+	<dialog name="S_DlgErrUnableToChangeClipFolderPublic">
+		$APP_NAME$ 无法更改此剪报箱在 $APP_NG_VERSION$ 上的公开设置。
+	</dialog>
+	<dialog name="S_DlgNewsBinRssFeedCreated">
+		<![CDATA[成功地为这个剪报箱创建了一个 RSS Feed。<BR><BR><a href="%s">查看 feed</a> / <a href="copy">将 Feed 地址复制到剪贴板</a> / <a href="email">用电子邮件寄送此 Feed 地址</a>]]>
+	</dialog>
+	<dialog name="S_DlgCustomFilterExists">
+		已存在同名的自定义过滤器。
+	</dialog>
+	<dialog name="S_DlgAbnormalShutdownRestoreTabs">
+		您的 $APP_NAME$ 上次没有正常关闭。  您是否想要恢复当时所开启的浏览器标签？\n\n注意：如果您觉得上次关闭是因为您查看的某个网页，请选择【否】。
+	</dialog>
+	<dialog name="S_DlgPanicNumItemsMarkedRead">
+		%s 个条目被标记为已读。
+	</dialog>	
+	<dialog name="S_DlgPanicNoItemsMarkedRead">
+		抱歉，没有条目被标记为已读。
+	</dialog>
+	<dialog name="S_DlgNoDefaultClipFolder">
+		没有选择默认的剪报箱。  您现在要选择吗？
+	</dialog>
+	<!-- ***** startup wizard / account dialogs ***** -->
+	<dialog name="S_DlgStartupConfirmQuit">
+		您还没有完成 $APP_NAME$ 配置。  您确定要退出吗？
+	</dialog>
+	<dialog name="S_DlgNGThreadTimeoutWait">
+		花费的时间将比预期的还长。  您要继续等待吗？
+	</dialog>
+	<dialog name="S_DlgConfirmSyncPrivateFeed">
+		这个 Feed 可能无法被 $APP_SYNC_PLATFORM$ 访问。  您还是要尝试将其加入同步文件夹吗？
+	</dialog>
+	<dialog name="S_DlgConfirmSyncAuthenticatedFeed">
+		由于这个 Feed 需要身份校验，将其加入与 $APP_SYNC_PLATFORM$ 同步的文件夹可能无法更新。  建议您将其放入一个不同步的文件夹。\n\n您还是要将这个 Feed 加入到这个同步文件夹吗？
+	</dialog>
+	<dialog name="S_DlgConfirmDisableScriptDebugging">
+		Internet Explorer 脚本调试已经启用，可能造成在 $APP_NAME$ 中浏览时产生错误信息。\n\n脚本调试通常只用于开发者。  您要把它关闭么？
+	</dialog>
+	<dialog name="S_DlgConfirmPrefetchIncCacheSz">
+		$APP_NAME$ 使用您的浏览器“缓存”来保存预读条目，且您的缓存现在被设为 %sMB。  这可能不够存放所有被预读的条目。\n\n您需要 FeedDemon 在开始预读之前增加缓存大小么？
+	</dialog>
+	<dialog name="S_DlgCantDisableScriptDebugging">
+		Windows 禁止 $APP_NAME$ 停用脚本调试。\n\n要手动禁用它，请选择 Internet Explorer 工具菜单栏中的【Internet 选项】，切换到【高级】选项卡并选中【禁用脚本调试(其它)】。
+	</dialog>
+	<dialog name="S_DlgErrGoogleLoginFailed">
+		$APP_NAME$ 无法登入您的 Google 帐号。  请检查您是否输入了正确的用户名和密码。\n\n(状态 %d)
+	</dialog>
+	<dialog name="S_DlgErrGoogleLoginFailedCantConnect">
+		$APP_NAME$ 无法私密连接到您的 Google 帐号。  如果您有一个活动的 Internet 连接，请确定您的防火墙允许 $APP_NAME$ 连接。\n\n如果您通过代理服务器连接，请检查您 $APP_NAME$ 连接设置 (工具|选项|连接) 中的代理服务器设置。
+	</dialog>
+	<dialog name="S_DlgErrSQLiteCorrupt_BackupExists">
+		$APP_NAME$ 由于其 %s 数据库损坏无法启动。\n\n选择【OK】来恢复最近的备份。\n选择【取消】则结束程序。
+	</dialog>
+	<dialog name="S_DlgErrSQLiteCorrupt_BackupDoesNotExist">
+		$APP_NAME$ 由于其 %s 数据库损坏且没有备份而无法启动。\n\n选择【OK】来重建数据库并*删除所有数据*。\n选择【取消】则结束程序。
+	</dialog>
+	<dialog name="S_DlgConfirmConvertNonSyncToGReader">
+   	这会将您的 $APP_NAME$ 订阅导入 $S_GoogleReader$ 并使您的 $APP_NAME$ 与 $S_GoogleReader$ 同步。\n\n是否继续？
+	</dialog>	
+	<dialog name="S_DlgConfirmConvertNGToGReader">
+   	这会将您的 NewsGator 订阅导入 $S_GoogleReader$ 并使您的 $APP_NAME$ 与 $S_GoogleReader$ 而不是 NewsGator 同步。\n\n转换将花费几分钟时间，而且无法撤销。\n\n继续吗？
+	</dialog>
+	<dialog name="S_DlgConvertToGReaderSuccess">
+		$APP_NAME$ 现已与 $S_GoogleReader$ 同步。
+	</dialog>
+	<dialog name="S_DlgConvertToGReaderRemoveExistingGRSubs">
+		您在 $S_GoogleReader$ 中已存在订阅。  您希望 $APP_NAME$ 在转换前删除它们么？
+	</dialog>
+	<dialog name="S_DlgConfirmRemoveGReaderAcct">
+		这将完全禁用您的 $S_GoogleReader$ 同步。\n\n您在 $APP_NAME$ 和 $S_GoogleReader$ 中的 Feeds 都将保持完整但不会彼此同步。\n\n您确定要这样做吗？
+	</dialog>
+	<dialog name="S_DlgRemoveGReaderAcctCompleted">
+		$APP_NAME$ 不再与 $S_GoogleReader$ 同步。
+	</dialog>
+	<dialog name="S_DlgConfirmRemoveNGSync">
+		这将停用您所有订阅的同步。  这个操作无法撤销。  继续吗？
+	</dialog>
+	<dialog name="S_DlgConfirmAlreadyConvertedToGRSync">
+		这将从 $APP_NAME$ 中【删除】所有与 NewsGator 同步的 Feed，并用您的 $S_GoogleReader$ Feed 来代替。  继续吗？
+	</dialog>
+	<dialog name="S_DlgFeatureRequiresSync">
+		这个功能需要您启用与 $S_GoogleReader$ 同步。  您现在要启用它吗？
+	</dialog>	
+	<dialog name="S_DlgConfirmResync">
+		这将把所有已同步的 Feed 在这个 $APP_NAME$ 副本中标为已读，并重新下载未读条目以使 $APP_NAME$ 和 $S_GoogleReader$ 显示相同的未读计数。\n\n继续吗？
+	</dialog>	
+	<dialog name="S_DlgConfirmChangeGRAcct">
+		更改您的 $S_GoogleReader$ 账号将*删除*所有 $APP_NAME$ 中现在与 $S_GoogleReader$ 同步的Feed， 然后用新账号中的 Feed 进行替换。\n\n您确定要这样做吗？
+	</dialog>
+	<dialog name="S_DlgErrSameGRAcct">
+		您已与此账号同步。
+	</dialog>
+	<dialog name="S_DlgGRAcctChanged">
+		$APP_NAME$ 现在已与 $S_GoogleReader$ 账号 "%s" 同步。
+	</dialog>
+	<dialog name="S_DlgErrSQLiteOpenLockedDB">
+		$APP_NAME$ 由于数据库文件被其他程序锁定无法启动。\n\n这种情况往往在杀毒软件扫描并临时锁定文件时发生，这时您只需要稍后重新启动 $APP_NAME$ 即可。\n\n这也可能是由于先前的 $APP_NAME$ 进程没有正确关闭或还在运行所造成。 如果您无法结束先前的进程，您可能需要重新启动 Windows 来解除锁定。
+	</dialog>
+	<dialog name="S_DlrErrInvalidSerialAtStartup">
+		您的 $APP_NAME$ 看来不正确。  您想重新输入么？
+	</dialog>
+	<dialog name="S_DlgErrInvalidSerial">
+		对不起，这不是一个正确的 $APP_NAME$ 序列号。
+	</dialog>
+	<dialog name="S_DlgErrCantConfirmSerial">
+		很抱歉，$APP_NAME$ 无法校验这个序列号。
+	</dialog>
+	<dialog name="S_DlgErrRequestTimeout">
+		很抱歉，请求超时。
+	</dialog>
+	<dialog name="S_DlgErrCouldNotVerifyESellDLLs">
+		$APP_NAME$ 无法初始化 eSellerate 订购系统。  您可能需要以管理员身份重新安装 $APP_NAME$ 来修正这个问题。
+	</dialog>
+	<dialog name="S_DlgConfirmDeactivateInstance">
+		这样将取消激活并从您的这个 $APP_NAME$ 副本删除序列号，使其返回含有广告的模式。\n\n如果您这样做是为了在其它计算机上使用此序列号，请注意同一个序列号可以在多台计算机上使用。\n\n您还是要取消激活吗？
+	</dialog>
+	<dialog name="S_DlgDeactivateInstanceSuccess">
+		您的序列号已取消激活并从您的这个 $APP_NAME$ 副本中删除。  $APP_NAME$ 现在运行于含有广告的模式下。
+	</dialog>
+	<dialog name="S_DlgConfirmChangeSyncFolders">
+		选中的文件夹将被*加入*到 $S_GoogleReader$ 并在 $APP_NAME$ 中同步。\n\n未选中的文件夹将从 $S_GoogleReader$ 中被*删除*并不再被同步。\n\n继续吗？
+	</dialog>
+	<dialog name="S_DlgConfirmDeleteFolder">
+		删除这个文件夹将从 $APP_NAME$ 中删除所有它包含的 Feed。\n\n继续吗？
+	</dialog>
+	<dialog name="S_DlgConfirmDeleteSynchedFolder">
+		删除这个文件夹将从 $APP_NAME$ 和 $S_GoogleReader$ 中同时删除所有它包含的 Feed。\n\n继续吗？
+	</dialog>
+	<dialog name="S_DlgConfirmAddTagWithSameNameAsFolderGR">
+		您有文件夹与标签 "%s" 同名。\n\n$S_GoogleReader$ 将文件夹视为标签，因此这么做会引起混淆。  建议您为此标签使用一个不同的名称。\n\n您还是要加入这个标签吗？
+	</dialog>
+	<dialog name="S_DlgFilterLocationRequired">
+		您必须选择至少一个位置。
+	</dialog>
+	<dialog name="S_DlgFilterNoKeywords">
+		您必须输入至少一个关键字。
+	</dialog>
+	<dialog name="S_DlgFilterTitleExists">
+		已存在同名的过滤器。
+	</dialog>	
+	<dialog name="S_DlgConfirmDeleteFilter">
+		您确定要删除这个过滤器吗？
+	</dialog>
+	<dialog name="S_DlgConfirmFilterAddFeeds">
+		您确定要将这个过滤器应用到您所有的 Feed 上吗？
+	</dialog>
+	<dialog name="S_DlgNotFollowingAnyone">
+		您还没有关注任何人。  是否要找出几个您要关注的人？
+	</dialog>
+	<dialog name="S_DlgErrFDUpdater">
+		$APP_NAME$ 无法下载和安装更新。  您是否要转而浏览我们的下载页？
+	</dialog>
+</dialogs>
+<!--
+******************************
+*** SECTION III: CONSTANTS ***
+******************************
+-->
+<constants>
+		<!-- *** 
+		If you're localizing $APP_NAME$, S_TranslatorCredit is where you get the credit.  this string will appear on the 'About' screen.
+		ex: "English translation by Nick Bradbury"	
+		*** -->
+		<const name="S_TranslatorCredit" value="简体中文语言翻译：twinli (arden.li@gmail.com)"/>
+		<!-- filters for open dialog -->
+		<const name="S_OpmlFileFilter">
+			<![CDATA[OPML 文件|*.opml|XML 文件|*.xml|所有文件|*.*]]>
+		</const>
+		<const name="S_ApmlFileFilter">
+			<![CDATA[APML 文件|*.apml|XML 文件|*.xml|所有文件|*.*]]>
+		</const>
+		<const name="S_RssFileFilter">
+			<![CDATA[RSS 文件|*.rss|所有文件|*.*]]>
+		</const>
+		<const name="S_XmlFileFilter">
+			<![CDATA[XML 文件|*.xml|所有文件|*.*]]>
+		</const>
+		<const name="S_SoundFileFilter">
+			<![CDATA[WAV 文件 (*.wav)|*.wav]]>
+		</const>
+		<const name="S_HtmlFileFilter">
+			<![CDATA[HTML 网页文件|*.html|所有文件|*.*]]>
+		</const>
+		<!-- miscellaneous -->
+		<const name="S_True" value="真"/>
+		<const name="S_False" value="假"/>
+		<const name="S_None" value="(无)"/>
+		<const name="S_Empty" value="(空)"/>
+		<const name="S_Unknown" value="(未知)"/>
+		<const name="S_EmptyValue" value=""/>
+		<const name="S_Never" value="永远不"/>
+		<const name="S_And" value="和"/>
+		<const name="S_Me" value="我"/>
+		<const name="S_NoTitle" value="(无标题)"/>
+		<const name="S_NotApplicable" value="N/A"/>
+		<const name="S_KeywordSubscriptionTitle" value="%s 关键词： %s"/>
+		<const name="S_EmptyNewsItemDescription" value="(没有描述)"/>
+		<const name="S_NoItemsInNewspaperSearch" value="没有找到匹配的条目。"/>
+		<const name="S_NoItemsInNewspaperFilter" value="没有匹配当前过滤器的条目"/>
+		<const name="S_ChangeNewspaperFilter" value="变更报纸过滤器"/>
+		<const name="S_DaysAgo" value="%d 天前"/>
+		<const name="S_TranslatedByGoogle" value="由 Google 转译"/>
+		<const name="S_More" value="更多"/>
+		
+		<const name="S_HoursAgo_Plural" value="%s 小时前"/>
+		<const name="S_HoursAgo_Singular" value="1 小时前"/>
+		<const name="S_MinutesAgo_Plural" value="%s 分钟前"/>
+		<const name="S_MinutesAgo_Singular" value="1 分钟前"/>
+		
+		<const name="S_FeedTitleExistsInFolder" value="同名的 Feed 已存在于 &quot;%s&quot; 文件夹中"/>
+		
+		<const name="S_Like" value="喜欢"/>
+		<const name="S_Unlike" value="不喜欢"/>
+		
+		<const name="S_NwspSpacebarAction_BrowserDefault" value="使用浏览器默认操作"/>
+		
+		<const name="S_OpenBrowserTab_InForeground" value="在前台打开"/>
+		<const name="S_OpenBrowserTab_InBackground" value="在后台打开"/>
+		<const name="S_OpenBrowserTab_InBackgroundCtrl" value="当按住 CTRL 键时在后台打开"/>
+		
+		<const name="S_SQLiteLastCompactDate" value="最后一次压缩： %s (%d%% 碎片)"/>
+		<const name="S_SQLiteDBFileSize" value="数据库大小： %s MB"/>
+		<const name="S_SQLiteCheckIntegrityStatus" value="正在检查数据完整性..."/>
+		<const name="S_SQLiteCheckIntegrityError" value="在 %s 中发现错误"/>
+		<const name="S_SQLiteOrphanPostsRemoved" value="已删除 %d 孤立的文章"/>
+		<const name="S_SQLiteOrphanTagsRemoved" value="已删除 %d 孤立的标签"/>
+		<const name="S_SQLiteExceptionScanForErrors" value="建议您使用 文件 &gt; 管理缓存 &gt; 扫描错误来检查您 Feed 的问题。"/>
+		
+		<!-- shown in surfer style when no items match the current newspaper filter -->
+		<const name="S_NoItems_AllPosts" value="没有条目"/>
+		<const name="S_NoItems_Unread" value="没有未读的条目"/>
+		<const name="S_NoItems_Flagged" value="没有已加星标的条目"/>
+		<const name="S_NoItems_FlaggedUnread" value="没有未读或已加星标的条目"/>
+		<const name="S_NoItems_Today" value="没有今天以内的条目"/>
+		<const name="S_NoItems_Yesterday" value="没有昨天以内的条目"/>
+		<const name="S_NoItems_12Hours" value="没有过去12小时以内的条目"/>
+		<const name="S_NoItems_24Hours" value="没有过去24小时以内的条目"/>
+		<const name="S_NoItems_48Hours" value="没有过去48小时以内的条目"/>
+		<const name="S_NoItems_ThisWeek" value="没有本周内的条目"/>
+		<const name="S_NoItems_LastWeek" value="没有上周内的条目"/>
+		
+		<!-- user data file types (used when downloading) -->
+		<const name="S_UserData_Lang" value="语言包"/>
+		<const name="S_UserData_Style" value="报纸样式"/>
+		<const name="S_UserData_Search" value="搜索引擎定义"/>
+		
+		<const name="S_SelectFeed_Caption" value="选择一个 Feed"/>
+		<const name="S_SelectMultiFeeds_Caption" value="选择多个 Feed"/>
+		<const name="S_SelectFeed_AddPwdCaption" value="选择您想要分配登录的 Feed。"/>
+		<const name="S_SelectFeed_AddPwdMessage" value="注意已同步的 Feed 将不会显示在下面，因为它们使用 $S_GoogleReader$ 登录。"/>
+		
+		<const name="S_SearchResults" value="搜索结果"/>
+		<const name="S_SearchAgain" value="重新搜索"/>
+		<const name="S_All" value="全部"/>
+		<const name="S_ShowAll" value="显示全部"/>
+		<const name="S_Untitled" value="未命名"/>
+		<const name="S_Folder" value="文件夹"/>
+		<const name="S_Report" value="报告"/>
+		<const name="S_SharedItems" value="共享的条目"/>
+		<const name="S_NGRootFolder" value="[我的 Feeds]"/>
+		<const name="S_RootClipFolderNameNG" value="我的剪报箱"/>
+		<const name="S_MySharedItems" value="我共享的"/>
+		<const name="S_MyFriendsSharedItems" value="我关注的人共享的"/>
+		
+		<const name="S_HintCantEditSynchedFeedUrl" value="已同步的 Feed 网址不能修改"/>
+		
+		<const name="S_FeedburnerStatsHtml">
+			<![CDATA[<b>发行量：</b> %d / <b>点击数：</b> %d]]>
+		</const>
+		<const name="S_FeedBurnerErr" value="无法获得 FeedBurner 统计信息"/>
+		<const name="S_NewsGatorTOSLinkHtml">
+			<![CDATA[建立帐号，表明您已同意 $APP_NG_VERSION$ 的<a href="tos">服务条款</a>]]>
+		</const>
+		<const name="S_EmptyNewsItemHeader" value="(未选定任何 Feed)"/>
+		<const name="S_FailedFeedsCaption" value="添加 Feed 时出错 (文件夹 %s)"/>
+		<const name="S_HttpStatus" value="HTTP 状态：%d"/>
+		<const name="S_AllSubscriptions" value="所有订阅"/>
+		<const name="S_SyncDisabled" value="同步功能已关闭"/>
+		<const name="S_SyncDisabledTipText" value="点此图标开启同步功能。"/>
+		<const name="S_SyncEnabled" value="同步功能已启用"/>
+		<const name="S_SyncEnabledTipText" value="同步服务现在可用。"/>
+		<const name="S_IncomingLinksEveryone" value="所有人的订阅中连到这篇文章的链接"/>
+		<const name="S_IncomingLinksJustMe" value="您自己的订阅中连到这篇文章的链接"/>
+		<const name="S_NoIncomingLinks" value="没有任何连到这篇文章的链接"/>
+		<const name="S_SentFrom" value="发送自"/>
+		<const name="S_ChooseColorHint" value="选择颜色"/>
+		<const name="S_WhatIsThis" value="这是什么？"/>
+		<const name="S_ExportDlgTitle" value="选择导出文件"/>
+		<const name="S_ValidRangeHint" value="有效的数值范围是从 %d 到 %d"/>
+		<const name="S_TrayIconTipUnread" value="%s\n%s 未读条目"/>
+		<const name="S_TrayIconTipNoUnread" value="%s\n无 未读条目"/>
+		<const name="S_MenuEditPostTags" value="修改这个条目的标签..."/>
+		<const name="S_Options" value="选项"/>
+
+		<const name="S_TopVideoHint" value="%s (%s)"/>
+
+		<const name="S_Action_Search" value="搜索订阅"/>
+		<const name="S_Action_Cleanup" value="运行清理向导"/>
+		<const name="S_Action_WorkOffline" value="脱机工作"/>
+		<const name="S_Action_WorkOnline" value="在线工作"/>
+		<const name="S_Action_ShowDinosaurs" value="显示史前条目"/>
+		<const name="S_Action_ShowHttpErrors" value="有错误的 Feed"/>
+		<const name="S_Action_ChooseSyncPlatform" value="启用同步..."/>
+		<const name="S_Action_ShowFAQ" value="常见问题"/>
+		<const name="S_Action_ShowRecommendations" value="为我推荐"/>
+		<const name="S_Action_ManageContentFilters" value="管理内容过滤器..."/>
+		<const name="S_Action_GoPro" value="升级！"/>
+		
+		<const name="S_PrefetchStatus_Started" value="预读未读条目..."/>
+		<const name="S_PrefetchStatus_Completed" value="预读完毕"/>
+		<const name="S_PrefetchStatus_Cancelled" value="预读已取消"/>
+		<const name="S_PrefetchStatus_Progress" value="预读中...已完成 %d%%"/>
+		
+		<const name="S_PrefetchErr_NoItems" value="没有可预读的条目"/>
+		<const name="S_PrefetchErr_AlreadyActive" value="预读已激活"/>
+		<const name="S_PrefetchErr_Offline" value="脱机工作时无法预读"/>
+		<const name="S_PrefetchErr_Unknown" value="无法开始预读"/>
+
+		<const name="S_AltEmbedRemoved" value="嵌入内容已被禁用。点这里暂时启用嵌入内容。"/>
+		<const name="S_AddToDefaultClipFolder" value="加入到默认的剪报箱"/>
+		<const name="S_BrowseForCacheFolder" value="选择缓存文件夹"/>
+		<const name="S_BrowseForBackupCacheFolder" value="选择备份文件夹"/>
+		<const name="S_ChangePasswordCaption" value="修改密码"/>
+		<const name="S_ReenterPasswordCaption" value="确认密码"/>
+		<const name="S_ReenterPasswordPrompt" value="请再次输入密码："/>
+		<const name="S_Share" value="共享"/>
+		<const name="S_Unshare" value="停止共享"/>
+		<const name="S_Tag" value="标签"/>
+		<const name="S_MyTags" value="标签"/>
+		<const name="S_NoTags" value="(没有标签)"/>
+		<const name="S_NGInfoTitle" value="NewsGator 新闻"/>
+		<const name="S_HintAutoDiscoveredFeedIcon" value="点击订阅本页面"/>
+		<const name="S_ShortUrl" value="短网址"/>		
+		<const name="S_Reply" value="回复"/>
+		<const name="S_ReplyOnTwitter" value="在 Twitter 上回复"/>
+		<const name="S_Export" value="导出"/>
+		<const name="S_GoogleReader" value="Google Reader"/>
+		<const name="S_ImportPrevVersionCaption" value="升级订阅中"/>
+		<const name="S_ImportPrevVersionNumRemain" value="(还剩 %s 个条目)"/>		
+		<const name="S_Enable" value="启用"/>
+		<const name="S_Disable" value="禁用"/>
+		
+		<!-- recommendations -->
+		<const name="S_Preview" value="预览"/>
+		<const name="S_Subscribe" value="订阅"/>
+		<const name="S_DismissRecommendation" value="不感兴趣"/>
+		<const name="S_RecommendedFeeds" value="推荐的 Feed"/>
+		<const name="S_RecommendedPosts" value="推荐的文章"/>
+		<const name="S_NoFeedRecommendations" value="对不起，现在没有推荐的 Feed。"/>
+		<const name="S_NoPostRecommendations" value="对不起，现在没有推荐的文章。"/>
+			
+		<!-- default tags are used by the "Suggested Tags" feature -->
+   	<!-- S_DefaultTags contains "general" tags like Business, Family and Sports; S_DefaultTagsEx contains tags like Apple, Microsoft and Google that
+   		 are likely to appear in feeds read by the tech-heavy FD userbase.  these have been separated so that S_DefaultTags can be used elsewhere
+  			 without being "polluted" by S_DefaultTagsEx. -->		
+		<const name="S_DefaultTags" value="business,entertainment,family,health,music,photos,politics,religion,science,sex,sports,tech,travel,video"/>
+		<const name="S_DefaultTagsEx" value="amazon,apple,facebook,google,hardware,internet,microsoft,rss,software,twitter"/>
+		
+		<const name="S_DeletedSubsPercent" value="您订阅的 %d%% 将被删除"/>
+
+		<!-- used by fCertificateErrDlg -->
+		<const name="S_ErrCertificateHtml">
+			<![CDATA["%s" 提供的安全证书不被信任，不正确，或已过期。<br><br>这可能显示该网站试图欺骗您或截获您向服务器发送的数据。<br><br><b>建议您不要继续浏览。</b>]]>
+		</const>
+		
+		<!-- subscription report tasks -->		
+		<const name="S_TaskHtmlWhatsNew">
+			<![CDATA[<span style="font-weight:bold;font-size:larger;">感谢您升级 FeedDemon！</span><br /><a href="fdaction:?action=showwhatsnew">看看有什么更新</a>&#160;|&#160;<a href="fdaction:?action=hidewhatsnew">知道了</a>]]>
+		</const>
+		<const name="S_TaskHtmlCompactDB">
+			<![CDATA[<img src="$IMAGEDIR$compact.png" align="left" /><b>$APP_NAME$ 数据库包含碎片</b><br /><a href="fdaction:?action=compactdatabase">压缩数据库</a><br />可以提高性能]]>
+		</const>
+		
+		<const name="S_AttentionInfoHdr">
+			<![CDATA[我关注的 Feed]]>
+		</const>
+		<const name="S_AttentionInfo">
+			<![CDATA[在您使用 $APP_NAME$ 几天后，您最关注的 Feed 会出现在这里。]]>
+		</const>
+		<const name="S_NotAvailableOffline" value="脱机工作模式下不可用"/>
+		<const name="S_WorkingOffline" value="脱机工作"/>
+		<const name="S_MyKeywordsFolderName" value="关键词搜索 Feed"/>
+		<const name="S_ServiceUnavailable" value="服务不可用"/>
+		<const name="S_DownloadLanguages" value="下载其它语言包"/>
+		<const name="S_SharedBy" value="分享由"/>
+		<const name="S_ThatsMe" value="是我！"/>
+		
+		<const name="S_InfoBar_NewVersionDownload">
+			<![CDATA[有<b>新版本</b>的 $APP_NAME$ 可用！  <a href="url:update-download">立即下载并安装</a>或<a href="url:update-details">访问我们的网站了解细节</a>。]]>
+		</const>		
+		<const name="S_InfoBar_NewVersionReadMe">
+			<![CDATA[有<b>新版本</b>的 $APP_NAME$ 可用！  <a href="url:update-details">访问我们的网站了解细节</a>。]]>
+		</const>		
+		<const name="S_InfoBar_FindPeople">
+			<![CDATA[寻找要关注的人？  请在工具菜单中选择<B>寻找要关注的人</B>。]]>
+		</const>
+		<const name="S_InfoBarFeedAutoDiscovered">
+			<![CDATA[如果一个网页包含 Feed，您可以点击 $APP_NAME$ 地址栏最右端的<b>橙色图标</b>来订阅它。]]>
+		</const>
+		<const name="S_InfoBarUpgradeToV4">
+			<![CDATA[由于您以前购买过 $APP_NAME$，您拥有这个版本的折扣。  <a href="url:upgrade">立即升级</a>.]]>
+		</const>
+
+		<const name="S_PurchaseCaption" value="购买 $APP_NAME$ 专业版"/>
+		<const name="S_UpgradeCaption" value="升级到 $APP_NAME$ 专业版"/>
+
+		<const name="S_UpdateFeed" value="更新 Feed (&amp;U)"/>
+		<const name="S_UpdateSharedItems" value="更新共享的条目 (&amp;U)"/>
+		<const name="S_UpdateAll" value="全部更新"/>
+		<!-- tabbed browsing -->
+		<const name="S_BrowserEmptyTab" value="空白页面"/>
+		<const name="S_BrowserLoadingTab" value="载入中..."/>
+		<const name="S_MnuAddToFavorites" value="添加到收藏夹"/>
+		<const name="S_MnuOrganizeFavorites" value="管理收藏夹"/>
+		<const name="S_CurrentPage" value="当前页面"/>
+		<!-- day names - used by news item date grouping and newspaper date filter -->
+		<const name="S_Today" value="今天"/>
+		<const name="S_Yesterday" value="昨天"/>
+		<const name="S_ThisWeek" value="本周"/>
+		<const name="S_LastWeek" value="上周"/>
+		<const name="S_ThisMonth" value="本月"/>
+		<const name="S_LastMonth" value="上月"/>
+		<const name="S_Anytime" value="任何时间"/>
+		<const name="S_Older" value="更早的"/>
+		<const name="S_Sunday" value="星期日"/>
+		<const name="S_Monday" value="星期一"/>
+		<const name="S_Tuesday" value="星期二"/>
+		<const name="S_Wednesday" value="星期三"/>
+		<const name="S_Thursday" value="星期四"/>
+		<const name="S_Friday" value="星期五"/>
+		<const name="S_Saturday" value="星期六"/>
+		<const name="S_Future" value="未来"/>
+		<const name="S_AllNews" value="显示全部"/>
+		<const name="S_UnreadNews" value="尚未阅读的"/>
+		<const name="S_FlaggedNews" value="加上星标的"/>
+		<const name="S_UnreadOrFlaggedNews" value="未读/已加标记的"/>
+		<const name="S_TodaysNews" value="今天"/>
+		<const name="S_Last12HrsNews" value="12 小时内"/>
+		<const name="S_Last24HrsNews" value="24 小时内"/>
+		<const name="S_Last48HrsNews" value="48 小时内"/>
+		<const name="S_Last5DaysNews" value="5 天内"/>
+		<const name="S_YesterdaysNews" value="昨天"/>
+		<const name="S_ThisWeeksNews" value="本周"/>
+		<const name="S_LastWeeksNews" value="上周"/>
+		<const name="S_ThisMonthsNews" value="本月"/>
+		<const name="S_LastMonthsNews" value="上月"/>
+		<!-- newspaper date/time labels - %s is the date, ex: "Received Today" -->
+		<const name="S_NewsRcvdDate" value="接收于 %s"/>
+		<const name="S_NewsPubDate" value="发表于 %s"/>
+		<const name="S_NewsGenericDate" value="%s"/>
+		<!-- time intervals when setting update frequency -->
+		<const name="S_Minutes" value="分钟"/>
+		<const name="S_Hours" value="小时"/>
+		<const name="S_Days" value="天"/>
+		<!-- message dialog captions -->
+		<const name="S_Confirmation" value="确认"/>
+		<const name="S_Warning" value="警告"/>
+		<const name="S_Error" value="错误"/>
+		<const name="S_Information" value="信息"/>
+		<const name="S_Note" value="注意"/>
+		<!-- buttons -->
+		<const name="S_BtnOK" value="确定"/>
+		<const name="S_BtnCancel" value="取消"/>
+		<const name="S_BtnClose" value="关闭"/>
+		<const name="S_BtnNext" value="下一步 (&amp;N) &gt;"/>
+		<const name="S_BtnBack" value="&lt; 上一步 (&amp;B)"/>
+		<const name="S_BtnFinish" value="完成 (&amp;F)"/>
+		<const name="S_BtnStop" value="停止"/>
+		<const name="S_BtnYes" value="是 (&amp;Y)"/>
+		<const name="S_BtnNo" value="否 (&amp;N)"/>
+		<const name="S_BtnEdit" value="编辑 (&amp;E)"/>
+		<const name="S_BtnRemove" value="删除 (&amp;R)"/>
+		<const name="S_BtnAdd" value="新建 (&amp;A)"/>
+		<const name="S_BtnShowDetails" value="详细信息 &gt;&gt;"/>
+		<const name="S_BtnHideDetails" value="&lt;&lt; 详细信息"/>
+		<const name="S_BtnNewFolder" value="新建文件夹"/>
+		<const name="S_BtnSkip" value="跳过"/>
+		<const name="S_BtnChange" value="更改"/>
+		<const name="S_BtnIgnore" value="忽略"/>
+		<const name="S_BtnRetry" value="重试"/>
+		<const name="S_BtnAbort" value="放弃"/>
+		<!-- remove channel - actFeedRemove -->
+		<const name="S_RemoveFeed" value="取消订阅"/>
+		<const name="S_RemoveWatch" value="删除监视器"/>
+		<const name="S_RemoveNewsBin" value="删除剪报箱"/>
+		<!-- channel properties - actFeedProperties -->
+		<const name="S_PropertiesFeed" value="Feed 属性 (&amp;P)"/>
+		<const name="S_PropertiesWatch" value="监视器属性 (&amp;P)"/>
+		<const name="S_PropertiesNewsBin" value="剪报箱属性 (&amp;P)"/>
+		<!-- status bar messages -->
+		<const name="S_StatusHttpFailed" value="连接到 %s 时失败"/>
+		<const name="S_StatusHttpAuthFailed" value="连接到 %s 时验证失败"/>
+		<const name="S_StatusHttpConnect" value="正在连接..."/>
+		<const name="S_StatusHttpConnectionTestFailed" value="连接测试失败！"/>
+		<const name="S_StatusHttpConnectionTestPassed" value="连接测试正常！"/>
+		<const name="S_StatusHttpDownload" value="正在下载..."/>
+		<const name="S_StatusCancelling" value="正在取消..."/>
+
+		<const name="S_StatusPopupKilled" value="该页的弹出窗口已被屏蔽。  要允许弹出窗口，请按住 &quot;Ctrl&quot; 键再点击。"/>
+		<const name="S_StatusAutoDiscoveryCount" value="有 %d 个被自动发现的 Feed"/>
+		<const name="S_StatusNumItemsDisplayed" value="共显示了 %d 个条目"/>
+		<const name="S_StatusNumItemsFiltered" value="(有 %d 个条目被过滤器隐藏)"/>
+		<const name="S_StatusFeedUpdatedPlural" value="%s 有 %d 个新条目"/>
+		<const name="S_StatusFeedUpdatedSingular" value="%s 有 %d 个新条目"/>
+		<const name="S_StatusCleaningFeed" value="正在清除 %s..."/>
+		<const name="S_StatusBackupDB" value="正在创建数据备份..."/>
+		<const name="S_StatusProcessing" value="正在分析..."/>
+		<const name="S_StatusLoading" value="正在载入..."/>
+		<const name="S_StatusLoadingPopTopics" value="正在载入热门话题..."/>
+		<const name="S_StatusConvertingFeedOrFolder" value="正在转换 %s..."/>
+		<const name="S_StatusDeletingFeedOrFolder" value="正在删除 %s..."/>
+		<const name="S_StatusSynchingFeedOrFolder" value="正在同步 %s..."/>
+		<const name="S_StatusUnsynchingFeedOrFolder" value="正在取消同步 %s..."/>
+		<const name="S_StatusSaving" value="正在保存..."/>
+		<const name="S_StatusUpgradingFeeds" value="正在更新订阅..."/>
+		<const name="S_StatusScanningFeeds" value="正在检查 Feed 是否包含错误..."/>
+		<const name="S_VerifyingFeedDB" value="正在校验 Feed 数据库..."/>
+		<const name="S_VerifyingTagDB" value="正在校验标签数据库..."/>
+		<const name="S_StatusNoSubscriptions" value="您还没有订阅任何 Feed"/>
+		<const name="S_StatusSearching" value="搜索中..."/>
+		<const name="S_StatusSynchronizing" value="同步中..."/>
+		<const name="S_StatusReSynchronizing" value="重新同步中...这将花费几分钟时间..."/>
+		<const name="S_StatusUpdateNumNewItems" value="已经下载了 %d 个新条目"/>
+		<const name="S_StatusImportingSubs" value="正在导入订阅..."/>
+		<const name="S_StatusRetrievingExternalSubs" value="正在下载订阅..."/>
+		<const name="S_StatusDeletingSubs" value="正在删除订阅..."/>
+		<const name="S_StatusMergingSubs" value="正在合并订阅..."/>
+		<const name="S_StatusAddingSubs" value="正在添加订阅..."/>
+		<const name="S_StatusStep" value="步骤 %d / %d"/>
+		<const name="S_StatusAllFeedsInView" value="显示了所有 %d 个 Feed"/>
+		<const name="S_StatusNumFeedsInView" value="当前显示了 %d 个 Feed，共 %d 个"/>
+		<const name="S_StatusNumFeedsInKeywordView" value="有 %d 个 Feed 匹配 &quot;%s&quot;"/>
+		<const name="S_StatusItemAlreadyExistsInNewsBin" value="剪报箱中已经存在此条目"/>
+		<const name="S_StatusCantClipLocalContent" value="本地内容不能被加入 $APP_SYNC_PLATFORM$"/>
+		<const name="S_StatusMaxSearchItems" value="您的搜索结果到达 %s 条目上限。"/>
+		<const name="S_StatusDeactivating" value="正在隐藏..."/>
+		<const name="S_StatusValidatingSerialNumber" value="正在校验序列号..."/>
+		<const name="S_StatusConvertingToGReader"	value="转换到 $S_GoogleReader$..."/>
+		<const name="S_StatusRetrievingRecommendations" value="正在接收建议..."/>
+		<const name="S_StatusAutoPurging" value="正在清理旧条目..."/>
+		<const name="S_StatusErrTranslateFailed" value="条目不能被转译或已经是您所使用的语言"/>
+		<const name="S_StatusErrAlreadyTranslated" value="条目已被转译"/>
+		<const name="S_StatusErrFailed" value="Failed"/>
+		<const name="S_StatusCantClipUnlinkedPosts" value="没有链接的条目不能被加入 $APP_SYNC_PLATFORM$"/>
+		<const name="S_StatusSharedPost" value="条目已被共享。"/>
+		<const name="S_StatusUnsharedPost" value="条目已被停止共享。"/>
+		<const name="S_StatusNumMatches" value="找到 %d 个匹配条目"/>
+		<const name="S_StatusNoMatches" value="没有匹配条目"/>
+		<const name="S_StatusPageNum" value="页面 %d / %d"/>
+		<const name="S_StatusPanicProgress" value="正在扫描 %s..."/>
+		<const name="S_StatusChangeCache" value="正在更改缓存文件夹..."/>
+		<const name="S_StatusBackupCache" value="正在备份缓存文件夹..."/>
+		<const name="S_StatusCompactCache" value="正在压缩缓存 (这将花费几分钟时间)..."/>
+		<const name="S_StatusRebuildIndexes" value="正在重建索引..."/>
+		<const name="S_StatusStepOf" value="步骤 %d / %d"/>
+		<const name="S_StatusImportSuccess" value="导入成功"/>
+		<const name="S_StatusShortUrlLookupStarted" value="正在查找长网址..."/>
+		<const name="S_StatusShortUrlLookupSuccess" value="%s"/>
+		<const name="S_StatusShortUrlLookupFailed" value="解析短网址失败"/>
+		<const name="S_StatusBuildingFTS" value="创建搜索数据库 (这将花费几分钟时间)..."/>
+		<!-- used on fAddFeedDlg to show # of feeds user is adding -->
+		<const name="S_StatusNumSelected" value="%d 个被选中"/>
+		<const name="S_StatusImportingFeedOrFolder" value="正在导入 %s..."/>
+		<!-- status for secure lock icon -->
+		<const name="S_StatusLockIconUnsecure" value=""/>
+		<const name="S_StatusLockIconMixed" value="混合加密编码等级"/>
+		<const name="S_StatusLockIconUnknownBits" value="未知加密编码等级"/>
+		<const name="S_StatusLockIcon40Bit" value="40 位加密编码"/>
+		<const name="S_StatusLockIcon56Bit" value="56 位加密编码"/>
+		<const name="S_StatusLockIconFortezza" value="Fortezza 加密编码"/>
+		<const name="S_StatusLockIcon128Bit" value="128 位加密编码"/>
+		<!-- status for scheduler tasks -->
+		<const name="S_StatusTask_CheckSyncLogin" value="正在检查同步登录信息..."/>
+		<const name="S_StatusTask_SyncStatesGR" value="正在同步状态..."/>
+		<const name="S_StatusTask_CheckForSubChangesGR" value="正在同步订阅..."/>
+		<const name="S_StatusTask_UpdateStarredGR" value="正在同步加星的文章..."/>
+		<const name="S_StatusTask_UpdateSharedItemsGR" value="正在同步共享的条目..."/>
+		<const name="S_StatusTask_UpdateFriendsSharedItemsGR" value="正在同步关注的共享条目..."/>
+		<const name="S_StatusTask_UpdateFriendList" value="正在同步关注人..."/>
+		<const name="S_StatusTask_GetUpdatedPostsGR" value="正在同步文章..."/>
+		<const name="S_StatusTask_UpdateSynchedTagsGR" value="正在同步标签..."/>
+		<const name="S_StatusTask_UpdateFeeds" value="正在更新 Feed..."/>
+		<const name="S_StatusTask_ApplyingPanicFilterGR" value="正在标记 Feed 为已读..."/>
+		<!-- used by fPanicBtnDlg -->
+		<const name="S_Panic_MarkReadAll" value="所有条目"/>
+		<const name="S_Panic_MarkReadBefore12Hours" value="所有 12 小时或更久前的条目"/>
+		<const name="S_Panic_MarkReadBefore24Hours" value="所有 24 小时或更久前的条目"/>
+		<const name="S_Panic_MarkReadBefore48Hours" value="所有 48 小时或更久前的条目"/>
+		<const name="S_Panic_MarkReadBefore5Days" value="所有 5 天或更久前的条目"/>
+		<const name="S_PanicCaption" value="您有 %s 个未读条目。"/>
+		<const name="S_PanicCaptionTimed" value="您有 %s 个未读条目。这可不少啦！"/>
+		<!-- used by fPanicBtnDlgGR -->
+		<const name="S_GRPanicCaption" value="您在 $S_GoogleReader$ 中有超过 %s 的未读条目"/>
+		<!-- used by fImportDlg -->
+		<const name="S_ImpSrcGoogleReader" value="$S_GoogleReader$"/>
+		<const name="S_ImpSrcBloglines" value="Bloglines"/>
+		<const name="S_ImpSrcRssBandit" value="RSS Bandit"/>
+		<const name="S_ImpSrcFeedAPI" value="Windows Common Feed List"/>
+		<const name="S_ImpSrcOpml" value="OPML 文件"/>
+		<const name="S_ImportPrivateFeedCaption" value="私密 Feed"/>
+		<const name="S_ImportPrivateFeedMessage">
+			<![CDATA[这些 Feed 是<B>私密</B>或<B>保密</B>的，应该在导入时跳过。  无论如何都要导入吗？]]>
+		</const>
+		<!-- used by fFileErrDlg-->
+		<const name="S_HtmlErrorSavingFile">
+			<![CDATA[<font color="clRed"><b>保存文件时出错：</b> %s</font><br><br><b>文件：</b> %s<br><b>文件夹：</b> %s<br><br>%s]]>
+		</const>
+		<const name="S_FileErr_Unknown" value="点击【重试】再试一次，或按【忽略】不保存此文件而继续。"/>
+		<const name="S_FileErr_AccessDenied" value="请确定您能访问此文件夹且驱动器可用。"/>
+		<const name="S_FileErr_FileInUse" value="请确定此文件/文件夹没有被另一个应用程序锁定。"/>
+		<const name="S_FileErr_PathNotFound" value="请确定此文件夹存在且驱动器可用。"/>
+		<const name="S_FileErr_LowDiskSpace" value="请释放此驱动器的空间，然后单击【重试】。"/>
+		<const name="S_FileErr_LowMemory" value="请关闭所有非必须的应用程序，然后单击【重试】。"/>		
+		<const name="S_HtmlHttpErr_NoConnectionChoice">
+			<![CDATA[<b>$APP_NAME$ 无法连接到 Internet。</b><BR><BR>如果您有一个活动的连接，那么也许是您的<B>防火墙</B>屏蔽了 $APP_NAME$。<BR><BR>您想要如何处理？<BR><UL><LI><a href="test">测试我的连接（推荐）</a><LI><a href="offline">开始脱机工作</a></UL>]]>
+		</const>
+		<const name="S_HtmlHttpErr_NoConnection">
+			<![CDATA[<b>$APP_NAME$ 无法连接到 Internet。</b><BR><BR>如果您有一个活动的连接，那么也许是您的<B>防火墙</B>屏蔽了 $APP_NAME$，请确认您的防火墙允许 $APP_NAME$ 连接网络。<BR><BR>如果您是通过<B>代理服务器</B>来访问网络，请确认 $APP_NAME$ <BR>中的<A href="opt:proxy">代理服务器设置</A>。]]>
+		</const>
+		<const name="S_HtmlHttpErr_ProxyAuth">
+			<![CDATA[$APP_NAME$ 由于<b>代理服务器</b>错误无法连接到 Internet，这可能是由您的代理服务器设置错误造成的。<BR><BR><a href="opt:proxy">点击这里</a>修改您的代理服务器设置。]]>
+		</const>
+		<const name="S_HtmlHttpErr_ExpectationFailed">
+			<![CDATA[$APP_NAME$ 可以连接到 Internet，但是服务器没有返回预期的结果。<br><br>这可能是由您的<a href="opt:proxy">代理服务器设置</a>错误造成的。]]>
+		</const>
+		<const name="S_HtmlHttpErr_ServiceUnavail">
+			<![CDATA[很抱歉，$APP_NG_VERSION$ 的<B>同步</B>服务似乎不可用。  这是我们的问题，我们会尽快修复。]]>
+		</const>
+		<const name="S_HtmlHttpErr_ServerError">
+			<![CDATA[$APP_NAME$ 无法连接 $APP_NG_VERSION$ 的同步服务。]]>
+		</const>
+		<const name="S_HtmlHttpErr_Denied">
+			<![CDATA[$APP_NAME$ <B>无法登录</B>到 $APP_NG_VERSION$。  请<a href="opt:login">点击这里</a>来校验您的登录信息是否正确。]]>
+		</const>
+		<const name="S_HttpTest_ExtUrl" value="连接到外部网站"/>
+		<const name="S_HttpTest_GoogleLogin" value="检查 Google 登录信息"/>
+		<!-- news item states -->
+		<const name="S_Read" value="已读"/>
+		<const name="S_Unread" value="未读"/>
+		<const name="S_Flagged" value="已标记"/>
+		<const name="S_Unflagged" value="未标记"/>
+		<const name="S_Enclosure" value="附件"/>
+		<const name="S_NoEnclosure" value="无附件"/>
+		<!-- feed hint -->
+		<const name="S_FeedHintLastPostDate" value="最后发表时间： %s"/>
+		<!-- content filters -->
+		<const name="S_HtmlNumFeedsWithContentFilter">
+			<![CDATA[有 %d 个 Feed 使用这个过滤器 (<a href="change">点击修改</a>)]]>
+		</const>		
+		<const name="S_HtmlAssignContentFilterToFeeds">
+			<![CDATA[在以下勾选的 Feed 包含的<B>新条目上</B>使用内容过滤器 "%s"。]]>
+		</const>		
+		<!-- news item list and list view columns -->
+		<const name="S_ColTitle" value="标题"/>
+		<const name="S_ColRcvdDate" value="接收时间"/>
+		<const name="S_ColPubDate" value="发表时间"/>
+		<const name="S_ColGenericDate" value="日期"/>
+		<const name="S_ColModDate" value="修改时间"/>
+		<const name="S_ColDescription" value="描述"/>
+		<!-- taglist columns -->
+		<const name="S_ColTagName" value="标签"/>
+		<const name="S_ColTagCount" value="数量"/>
+		<const name="S_ColTagPublic" value="公开"/>
+		<!-- also used on fKeyboardShortcutsDlg -->
+		<const name="S_ColLink" value="链接"/>
+		<const name="S_ColRead" value="阅读状态"/>
+		<const name="S_ColAuthor" value="作者"/>
+		<const name="S_ColFlagged" value="标记状态"/>
+		<const name="S_ColSource" value="来源"/>
+		<const name="S_ColCategory" value="类别"/>
+		<const name="S_ColEnclosure" value="附件"/>
+		<const name="S_ColLastPostDt" value="最后发表时间"/>
+		<const name="S_ColRssFile" value="Feed"/>
+		<const name="S_ColShortcut" value="快捷键"/>
+		<!-- filter list -->
+		<const name="S_ColFilterName" value="过滤器名称"/>
+		<const name="S_ColFilterCount" value="# Feed"/>
+		<!-- fBlogThisAppsDlg -->
+		<const name="S_ColAppName" value="名称"/>
+		<const name="S_ColAppCmdLine" value="命令行"/>
+		<const name="S_ColAppDefault" value="默认"/>
+		<!-- fOptionsDlg (sounds) -->
+		<const name="S_SndWatchNotify" value="条目被添加到监视器时"/>
+		<const name="S_SndNewsBinNotify" value="条目被共享时"/>
+		<const name="S_SndAutoDiscovery" value="Feed 被加入自动发现列表时"/>
+		<const name="S_SndDesktopAlert" value="桌面提示"/>
+		<const name="S_SndPrefetchComplete" value="预读完毕"/>
+		<!-- updating -->
+		<const name="S_UpdateFolder" value="更新文件夹 (&amp;O)"/>
+		<const name="S_CancelUpdate" value="取消更新"/>
+		<!-- MSXML error detail -->
+		<const name="S_XmlErrDetailLine" value="第 %d 行，第 %d 栏：%s"/>
+		<!-- login dialog for secure feeds -->
+		<const name="S_SecureFeedLoginMsg">
+			<![CDATA[<b>%s</b><font size="12"><br></font>这个 Feed 需要您的用户名和密码。]]>
+		</const>
+		<const name="S_NewSecureFeedLoginMsg">
+			<![CDATA[<b>保密的 Feed</b><font size="12"><br></font>这个 Feed 需要您的用户名和密码。]]>
+		</const>
+		<const name="S_SecureTwitterFeedLoginMsg">
+			<![CDATA[<b>%s</b><font size="12"><br></font>推特需要您的用户名和密码。]]>
+		</const>
+		<const name="S_NewSecureTwitterFeedLoginMsg">
+			<![CDATA[<b>Secure Feed</b><font size="12"><br></font>推特需要您的用户名和密码。]]>
+		</const>
+		<const name="S_EditSecureFeedLoginMsg">
+			<![CDATA[<b>%s</b><font size="12"><br></font>请输入这个 Feed 的用户名和密码。]]>
+		</const>
+		<const name="S_EditSecureFeedFailedLoginMsg">
+			<![CDATA[<b>%s</b><font size="12"><br></font>这个 Feed 的登录信息不正确。]]>
+		</const>
+		<const name="S_ServiceLoginUserNameAndPassword">
+			<![CDATA[<b>%s</b><font size="12"><br></font>请输入您的 %s 用户名和密码。]]>
+		</const>
+		<const name="S_ServiceLoginUserName">
+			<![CDATA[<b>%s</b><font size="12"><br></font>请输入您的 %s 用户名。]]>
+		</const>
+		<const name="S_DomainLoginMsg">
+			<![CDATA[<b>%s</b><font size="12"><br></font>请输入您的 %s 域用户名和密码。]]>
+		</const>
+		<const name="S_ClearStoredItems" value="[ 清除此列表 ]"/>
+		<const name="S_Clear" value="清除"/>
+		<const name="S_UseDefaultNewspaper" value="（使用默认样式）"/>
+		<const name="S_KeywordSearchFor" value="关键词搜索 &quot;%s&quot;"/>
+		<!-- toolbar customization menu -->
+		<const name="S_TBar_AddRemoveButtons" value="添加/删除按钮"/>
+		<const name="S_TBar_MoreButtons" value="自定义"/>
+		<!-- titles for watch/news bin newspapers -->
+		<const name="S_Watches" value="监视器"/>
+		<const name="S_NewsBins" value="剪报箱"/>
+		<const name="S_AllNewsBins" value="所有的剪报"/>
+		<const name="S_CreateNewsBin" value="创建剪报箱..."/>
+		<!-- browser zoom -->
+		<const name="S_ZoomIn" value="放大"/>
+		<const name="S_ZoomOut" value="缩小"/>
+		<!-- auto-browse -->
+		<const name="S_AutoBrowseNever" value="从不"/>
+		<const name="S_AutoBrowseEmptyDesc" value="当描述为空时"/>
+		<const name="S_AutoBrowseAlways" value="总是"/>
+		<!-- cleanup wizard location -->
+		<const name="S_CWizWhere_Everything" value="所有条目"/>
+		<const name="S_CWizWhere_AllFolders" value="所有文件夹"/>
+		<const name="S_CWizWhere_AllWatches" value="所有监视器"/>
+		<const name="S_CWizWhere_AllClippings" value="所有剪报"/>
+		<const name="S_CWizWhere_SelFolders" value="选定的文件夹"/>
+		<!-- feed stats (feed properties dialog and Report.xsl) -->
+		<const name="S_StatLastPostDate" value="最后发表时间"/>
+		<const name="S_StatLastHttpStatus" value="上一次 Http 状态"/>
+
+		<const name="S_StatTotalPosts" value="条目总数"/>
+		<const name="S_StatUnreadPosts" value="未读条目"/>
+		<const name="S_StatFlaggedPosts" value="已标记条目"/>
+		<const name="S_StatFeedVisits" value="Feed 浏览次数"/>
+		<const name="S_StatFeedVisitsExplicit" value="Feed 点击次数"/>
+
+		<const name="S_StatPostVisits" value="条目点击次数"/>
+		<const name="S_StatPostVisitsEx" value="条目链接点击次数"/>
+		<const name="S_StatFollowedLinks" value="跟随的链接"/>
+		<const name="S_StatEnclosureVisits" value="Podcast 点击次数"/>
+		<const name="S_StatPostsAddedToNewsBins" value="被添加到剪报箱的条目"/>
+		<const name="S_StatPostsShared" value="已共享的条目"/>
+		<const name="S_StatPostsAddedToWatches" value="被添加到监视器的条目"/>
+		<const name="S_StatPostsEverFlagged" value="曾被加上标记的条目"/>
+		<const name="S_StatPostsEverTagged" value="曾被加上标签的条目"/>
+		<const name="S_StatPostsEmailed" value="已寄出的条目"/>
+		<const name="S_StatPostsEverLiked" value="曾喜欢的条目"/>
+		<const name="S_StatAttention" value="关注度"/>
+		<const name="S_FolderStats" value="这个文件夹包括 %s 个 Feed，%s 个条目，%s 个未读条目和 %s 个已标记的条目"/>
+		<const name="S_TotalStats" value="您一共有 %s 个文件夹，%s 个 Feed，%s 个条目，%s 个未读条目，%s 个已标记的条目和 %s 个加上标签的条目"/>
+		<const name="S_WatchStats" value="这个监视器包括 %s 个条目"/>
+		<const name="S_NewsBinStats" value="这个剪报箱包括 %s 个条目"/>
+		<!-- subscription tree headers -->
+		<const name="S_HdrSubscriptions" value="订阅"/>
+		<const name="S_HdrWatches" value="监视器"/>
+		<const name="S_HdrNewsBins" value="剪报箱"/>
+		<const name="S_HdrTags" value="$S_MyTags$"/>
+		<const name="S_HdrSharedItems" value="$S_SharedItems$"/>
+		<const name="S_HdrFilteredItems" value="监视器"/>
+		<const name="S_HdrWatches" value="监视器"/>
+		<const name="S_HdrInfoNoUnreadFeeds" value="(no unread feeds)"/>
+		<const name="S_HdrInfoNoFlaggedFeeds" value="(no starred feeds)"/>
+		<const name="S_HdrInfoNoKeywordFeeds" value="(no matches found)"/>
+		<const name="S_HdrInfoNoTags" value="$S_NoTags$"/>
+		<!-- display names for dynamic filtered feeds -->
+		<const name="S_FilterName_Unread" value="所有的未读条目"/>
+		<const name="S_FilterName_Flagged" value="所有已标记的条目"/>
+		<const name="S_FilterName_Today" value="今天的条目"/>
+		<const name="S_FilterName_Yesterday" value="昨天的条目"/>
+		<!-- newspaper shortcuts -->
+		<const name="S_NwspKeyNextPost" value="下一个条目"/>
+		<const name="S_NwspKeyNextPostEx" value="下一个条目（自动移动到下一个 Feed）"/>
+		<const name="S_NwspKeyPrevPost" value="上一个条目"/>
+		<const name="S_NwspKeyNextPage" value="下一页"/>
+		<const name="S_NwspKeyPrevPage" value="上一页"/>
+		<const name="S_NwspKeyShowPost" value="显示条目"/>
+		<const name="S_NwspKeyViewLink" value="显示条目链接"/>
+		<const name="S_NwspKeyToggleRead" value="切换阅读状态"/>
+		<const name="S_NwspKeyToggleFlag" value="切换标记状态"/>
+		<const name="S_NwspKeySendTo" value="显示 &quot;发送到&quot; 菜单"/>
+		<const name="S_NwspKeyClip" value="剪报项"/>
+		<const name="S_NwspKeyShare" value="共享条目"/>
+		<const name="S_NwspKeyBrowseExternal" value="从外部浏览器打开"/>
+		<const name="S_NwspKeyBrowseNewTab" value="在新标签页打开"/>
+		<const name="S_NwspKeyTagItem" value="加上标签"/>
+		<const name="S_NwspKeyEmailItem" value="邮寄该条目"/>
+		<const name="S_NwspKeyToggleContentSize" value="切换内容大小"/>
+		<!-- used by newspapers -->
+		<const name="S_RptTitleAllSubscriptions" value="$S_HdrSubscriptions$"/>
+		<const name="S_RptTitleAllWatches" value="监视器"/>
+		<const name="S_RptTitleAllNewsBins" value="剪报箱"/>
+		<const name="S_RptTitleFolder" value="%s"/>
+		<const name="S_MemeRptTitle" value="热门话题"/>
+		<const name="S_PopularTopics_Me" value="我订阅的热门主题"/>
+		<const name="S_PopularTopics_Shared" value="我关注的人的受欢迎主题"/>
+		<const name="S_PopularTopics_Everyone" value="所有人订阅中的受欢迎主题"/>
+		<const name="S_DinosaurRptTitle" value="史前条目"/>
+		<const name="S_DinosaurRptPageTitle">
+			<![CDATA[史前条目：在 <a class="spin" href="fdaction:?action=changedinodays">%d</a> 天内没有更新的 Feed]]>
+		</const>
+
+		<const name="S_AboutTabsTitle" value="您在 $APP_NAME$ 中打开了一个新标签"/>
+		<const name="S_AboutTabsTipsHtml">
+			<![CDATA[<h2>标签浏览器提示：</h2><ul><li>按住 CTRL 键点击链接来打开一个新标签</li><li>双击标签来关闭它</li><li>点击并拖拽标签来移动它</li><li>右键点击标签来显示更多选项</li></ul><h2>标签浏览器快捷方式：</h2><ul><li>新标签 = <code>CTRL+T</code></li><li>关闭标签 = <code>CTRL+W</code></li><li>关闭未激活的标签 = <code>CTRL+ALT+W</code></li><li>下一个标签 = <code>CTRL+TAB</code></li><li>前一个标签 = <code>SHIFT+CTRL+TAB</code></li></ul>]]>
+		</const>
+		
+		<const name="S_TopUrlRptTitle" value="浏览最多的"/>
+		<const name="S_ClosedUrlRptTitle" value="最近关闭的"/>
+		
+		<const name="S_RecommendationsRptTitle" value="推荐"/>
+
+		<const name="S_FeedHistoryRptPageTitle" value="自动发现 Feed 的历史记录"/>
+		<const name="S_HttpErrorRptTitle" value="HTTP 错误"/>
+		<const name="S_HttpErrorRptPageTitle" value="有 HTTP 错误的 Feed"/>
+		<const name="S_FeedAttentionRptTitle" value="关注度报告"/>
+		<const name="S_FeedAttentionRptPageTitle" value="按关注度排列的 Feed"/>
+		<const name="S_MarkAllFeedsRead" value="标记 Feed 为已读"/>
+		<const name="S_MarkAllWatchesRead" value="标记监视器为已读"/>
+		<const name="S_MarkAllNewsBinsRead" value="标记剪报箱为已读"/>
+		<const name="S_MarkFolderRead" value="标记文件夹为已读"/>
+
+		<const name="S_MarkFeedRead" value="标记 Feed 为已读"/>
+		<const name="S_NewsHintAddToNewsBin" value="加入到剪报箱"/>
+		<const name="S_NewsHintShare" value="加入到共享条目"/>
+		<const name="S_NewsHintUnshare" value="从共享条目中删除"/>
+		<const name="S_NewsHintShareAnnotate" value="标注并共享"/>
+		<const name="S_NewsHintOpenLink" value="打开链接"/>
+		<const name="S_NewsHintOpenInNewTab" value="在新标签中打开链接"/>
+		<const name="S_NewsHintEnclosure" value="下载附件"/>
+		<const name="S_NewsHintComments" value="评论"/>
+		<const name="S_NewsHintToggleRead" value="切换阅读状态"/>
+		<const name="S_NewsHintToggleFlag" value="切换标记状态"/>
+		<const name="S_NewsHintMarkRead" value="标记为已读"/>
+		<const name="S_NewsHintMarkGroupRead" value="标记组为已读"/>
+		<const name="S_NewsHintMarkUnread" value="标记为未读"/>
+		<const name="S_NewsHintFeedOptions" value="Feed 选项"/>
+		<const name="S_NewsHintDeletePost" value="删除"/>
+		<const name="S_NewsHintDeleteHistory" value="删除"/>
+		<const name="S_NewsHintEmail" value="邮寄这篇文章"/>
+		<const name="S_NewsHintPostToDelicious" value="张贴到 del.icio.us"/>
+
+		<const name="S_NewsHintTechnoratiLinks" value="Technorati 链接"/>
+		<const name="S_NewsHintGotoFeed" value="显示这个 Feed"/>
+		<const name="S_NewsHintGotoPost" value="显示这篇文章"/>
+		<const name="S_NewsHintGotoFeedLink" value="Feed 主页"/>
+		<const name="S_NewsHintGotoPostLink" value="打开链接"/>
+		<const name="S_NewsHintUnsubscribe" value="取消订阅"/>
+		<const name="S_NewsHintSubscribe" value="订阅"/>
+		<const name="S_NewsHintPreview" value="预览"/>
+		<const name="S_NewsHintSubscribeCommentFeed" value="订阅这个条目的评论"/>
+		<const name="S_NewsHintAlreadySubscribed" value="（已经订阅）"/>
+		<const name="S_NewsHintSendTo" value="发送到"/>
+		<const name="S_NewsHintHideMeme" value="隐藏这个主题"/>
+
+		<const name="S_NewsHintProperties" value="属性"/>
+		<const name="S_NewsHintStatistics" value="统计信息"/>
+		<const name="S_NewsHintBrowserHome" value="浏览器主页"/>
+		<const name="S_NewsHintSubscriptionsHome" value="订阅主页"/>
+		<const name="S_NewsLblOpenEnclosure" value="打开"/>
+
+		<const name="S_NewsLblDownloadEnclosure" value="下载"/>
+		<const name="S_NewsResetAttention" value="重置关注度"/>
+		<const name="S_NewsResetAttentionAll" value="为所有 Feed 重置关注度"/>
+		<const name="S_NewsHdrFavoriteFeeds">
+			<![CDATA[我<a href="fdaction:?action=showleastattn" title="切换到最不关注">最关注</a>的 Feed]]>
+		</const>
+		<const name="S_NewsHdrLeastFavoriteFeeds">
+			<![CDATA[我<a href="fdaction:?action=showmostattn" title="切换到最关注">最不关注</a>的 Feed]]>
+		</const>
+		<const name="S_NewsHdrUnreadFeeds" value="含有未读条目的 Feed"/>
+		<const name="S_NewsHdrFlaggedFeeds" value="含有已标记条目的 Feed"/>
+		<const name="S_NewsHdrTotal" value="共计"/>
+		<const name="S_NewsLblFeedTitle" value="Feed 标题"/>
+		<const name="S_NewsHintMore" value="显示完整文章"/>
+		<const name="S_NewsLblExpand" value="[更多]"/>
+		<const name="S_NewsLblCollapse" value="[更少]"/>
+		<const name="S_NewsHintExpand" value="展开这个条目"/>
+		<const name="S_NewsHintCollapse" value="折叠这个条目"/>
+		<const name="S_NewsHintPlayMedia" value="播放媒体"/>
+		<const name="S_NewsHintMapThis" value="标注地图"/>
+		<const name="S_NewsLblCreateWatch" value="新建监视器..."/>
+		<const name="S_NewsLblCreateNewsBin" value="新建剪报箱..."/>
+		<const name="S_NewsLblMore" value="[更多]"/>
+		<const name="S_NewsLblThumbnails" value="缩略图"/>
+		<const name="S_NewsLblNextPage" value="下一页"/>
+		<const name="S_NewsLblPreviousPage" value="上一页"/>
+		<const name="S_NewsLblPingFeed" value="更新"/>
+		<const name="S_NewsHintNumSharedPosts" value="已共享的条目"/>
+		<const name="S_NewsHintSearchNewspaper" value="搜索此报纸中的条目"/>
+	
+		<const name="S_NewsHintUpLevel" value="向上一层"/>
+		<const name="S_NewsLblContent" value="内容"/>
+		<const name="S_NewsLblShowFullPosts" value="全文"/>
+		<const name="S_NewsLblShowExcerpts" value="摘要"/>
+		<const name="S_NewsLblShowHeadlines" value="标题"/>
+		<const name="S_NewsLblFolderView" value="文件夹视图"/>
+		<const name="S_NewsLblFolderOverview" value="订阅"/>
+		<const name="S_NewsLblFolderDetail" value="新闻项"/>
+		<const name="S_NewsLblGroupBy" value="分组依据"/>
+		<const name="S_NewsLblGroupByFeed" value="Feed"/>
+		<const name="S_NewsLblGroupByDate" value="日期"/>
+		<const name="S_NewsLblGroupByTitle" value="标题"/>
+		<const name="S_NewsLblGroupByNone" value="无"/>
+		<const name="S_NewsHintGroupByFeed" value="根据 Feed 分组"/>
+		<const name="S_NewsHintGroupByDate" value="根据日期分组"/>
+		<const name="S_NewsHintGroupByTitle" value="根据标题分组"/>
+		<const name="S_NewsHintGroupByFolder" value="根据文件夹分组"/>
+		<const name="S_NewsHintGroupByNone" value="不分组"/>
+		<const name="S_NewsHintChooseIcons" value="选择报纸图标"/>
+		<const name="S_NewsHintTranslate" value="转译"/>
+		<const name="S_NewsLblMatchingItems" value="匹配项"/>
+		<const name="S_NewsLblMarkPageRead" value="标记页面为已读"/>
+		<const name="S_NewsLblMarkPageReadGotoNext" value="标记页面为已读并跳至下一页"/>
+		<const name="S_NewsLblMarkAllPagesRead" value="标记所有页面为已读"/>
+		<const name="S_NewsLblAdvancedSearch" value="高级搜索"/>
+		<const name="S_NewsHintDateRange" value="日期范围"/>
+		<const name="S_NewsLblIncomingLinks" value="谁链接到这里？"/>
+		<const name="S_NewsLblNoMemes" value="在这个日期范围内没有找到热门话题。  如果更改时间范围后仍然不能显示任何主题，那么可能您没有订阅到足够多链接到相同文章的 Feed。"/>
+		<const name="S_NewsLblNoMemesShort" value="没有找到热门话题。  您可能没有订阅到足够多链接到相同文章的 Feed。"/>
+		<const name="S_NewsLblFindFeeds" value="查找新的 Feed"/>
+		<const name="S_NewItemsRcvdNewHtml">
+			<![CDATA[<a href="fdaction:?action=newitemsrcvdreload"><img src="$IMAGEDIR$reload-lg.png" align="absmiddle" border="0" style="margin-right:8px" /></a> 已收到新条目但尚未显示在此报纸中 (<a href="fdaction:?action=newitemsrcvdreload" title="重新载入报纸以显示新条目">重新载入</a>或<a href="fdaction:?action=newitemsrcvdhide" title="略过此消息">忽略</a>).]]>
+		</const>
+		<const name="S_NewsHintMoreMenu" value="更多操作"/>
+		<const name="S_NewsHintShareMenu" value="共享"/>
+		<const name="S_RptTitleTags" value="$S_MyTags$"/>
+		<const name="S_NewsHintEditTags" value="修改标签"/>
+		<const name="S_NewsHintTagMenu" value="快速标签"/>
+		<const name="S_NewsHintShowTag" value="显示带有此标签的条目"/>
+		<const name="S_TagNewspaperTitle" value="已加标签的条目 &quot;%s&quot;"/>
+		<const name="S_NewsLblMyTags" value="$S_MyTags$"/>
+		<const name="S_NewsLblManageTags" value="管理标签"/>
+		<const name="S_NewsLblNoTags" value="您还没有加上任何标签。  要给一个条目加上标签，请在 $APP_NAME$ 报纸中点击标题下方的标签图标。"/>
+
+		<const name="S_NewsHintShowCategory" value="显示这个分类中所有的条目"/>
+		<const name="S_CategoryNewspaperTitle" value="所有分类 &quot;%s&quot; 中的条目"/>
+		<const name="S_NewsLblCategories" value="分类"/>
+		
+		<const name="S_StyleRequiresIE8" value="此报纸样式需要 Internet Explorer 8 或更新。"/>
+		<const name="S_StyleRequiresIE9" value="此报纸样式需要 Internet Explorer 9 或更新。"/>
+		
+		<const name="S_FindPeopleNoResults" value="没有找到匹配的人。"/>
+		<const name="S_FindPeopleRptTitle" value="查找想关注的人"/>
+		<const name="S_FollowedPeopleRptTitle" value="我关注的人"/>
+		<const name="S_FindMorePeople" value="查找更多"/>
+		
+		<const name="S_UserFollow" value="关注"/>
+		<const name="S_UserUnfollow" value="不再关注"/>
+		<const name="S_UserPreview" value="预览"/>
+		<const name="S_UserViewProfile" value="查看资料"/>
+		<const name="S_UserFollowHint" value="关注这个用户"/>
+		<const name="S_UserUnfollowHint" value="不再关注这个用户"/>
+		<const name="S_UserPreviewHint" value="预览这个用户共享的条目"/>
+		<const name="S_UserViewProfileHint" value="查看这个用户的资料"/>
+		<const name="S_CurrentUserDisplayName" value="我"/>
+		
+		<!-- "more actions" popup menu -->
+		<const name="S_MoreActions_Browse" value="在外部浏览器中打开"/>
+		<const name="S_MoreActions_CommentHtmlUrl" value="打开评论"/>
+		<const name="S_MoreActions_CommentXmlUrl" value="订阅评论"/>
+		<const name="S_MoreActions_Translate" value="翻译"/>
+		<const name="S_MoreActions_Like" value="喜爱"/>
+		<const name="S_MoreActions_Delete" value="删除"/>
+		<const name="S_MoreActions_Clip" value="加入剪报箱"/>
+		
+		<!-- stream -->
+		<const name="S_Stream_NwspTitle" value="我的流"/>
+		<const name="S_Stream_Options" value="配置流..."/>
+		<const name="S_Stream_MarkRead" value="标记流为已读"/>
+		<const name="S_Stream_DockHint" value="切换停靠状态"/>
+		<const name="S_Stream_NoPosts" value="您的流是空的。"/>
+		<const name="S_Stream_NoFeeds" value="您的流中没有任何 Feed。  点击上方 &quot;我的流&quot; 并选择 &quot;配置流&quot; 来将 Feed 加入您的流。"/>
+		
+		<const name="S_WhatsNewTitle" value="感谢升级！"/>
+</constants>
+</language>
